@@ -2,10 +2,12 @@ import 'sub_topic.dart';
 
 class Topic {
   final String title;
-  final SubTopic subTopic;
+  final List<SubTopic> subTopics;
+   final String image;
 
   const Topic ({
     required this.title,
-    required this.subTopic,
+    required this.subTopics,
+    required this.image,
   });
 }

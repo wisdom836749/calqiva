@@ -1,9 +1,9 @@
 import 'lesson_block.dart';
 
 class Lesson {
-  final List<LessonBlock> block;
+  final List<LessonBlock> blocks;
 
   const Lesson ({
-    required this.block,
+    required this.blocks,
   });
 }
