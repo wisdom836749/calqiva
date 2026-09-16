@@ -42,10 +42,6 @@ class DatabaseHelper{
     );
 
     await db.execute(
-      DatabaseSchema.createLessonBlocksTable
-    );
-
-    await db.execute(
       DatabaseSchema.createHeadingBlocksTable
     );
 

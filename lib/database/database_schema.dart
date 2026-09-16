@@ -11,7 +11,7 @@ class DatabaseSchema {
     CREATE TABLE sub_topics(
       id INTEGER PRIMARY KEY,
       topic_id INTEGER NOT NULL,
-      title TEXT NOT NULL,
+      sub_title TEXT NOT NULL,
 
       FOREIGN KEY (topic_id) REFERENCES topics(id)
     )
@@ -20,21 +20,11 @@ class DatabaseSchema {
   static const createLessonsTable = '''
     CREATE TABLE lessons(
       id INTEGER PRIMARY KEY,
-      sub_topics_id INTEGER NOT NULL,
-      title TEXT NOT NULL,
-
-      FOREIGN KEY (sub_topics_id) REFERENCES sub_topics(id)
-    )
-  ''';
-
-  static const createLessonBlocksTable = '''
-    CREATE TABLE lesson_blocks(
-      id INTEGER PRIMARY KEY,
-      lesson_id INTEGER PRIMARY KEY,
+      sub_topic_id INTEGER PRIMARY KEY,
       block_type TEXT NOT NULL,
       position INTEGER NOT NULL,
 
-      FOREIGN KEY (lesson_id) REFERENCES lesson(id)
+      FOREIGN KEY (sub_topic_id) REFERENCES sub_topics(id)
     )
   ''';
 
@@ -43,7 +33,7 @@ class DatabaseSchema {
       block_id INTEGER  PRIMARY KEY,
       heading TEXT NOT NULL,
 
-      FOREIGN KEY (block_id) REFERENCES lesson_blocks(id)
+      FOREIGN KEY (block_id) REFERENCES lessons(id)
     )
   ''';
 
@@ -58,7 +48,7 @@ class DatabaseSchema {
       block_id INTEGER PRIMARY KEY,
       paragraph_id INTEGER NOT NULL,
 
-      FOREIGN KEY (block_id) REFERENCES lesson_blocks(id),
+      FOREIGN KEY (block_id) REFERENCES lessons(id),
 
       FOREIGN KEY (paragraph_id) REFERENCES paragraph_blocks(id)
     )
@@ -68,7 +58,8 @@ class DatabaseSchema {
     CREATE TABLE text_parts(
       paragraph_id INTEGER PRIMARY KEY,
       text TEXT NOT NULL,
-      ismath INTEGER DEFAULT 0,
+      is_math INTEGER NOT NULL DEFAULT 0,
+      is_image INTEGER NOT NULL DEFAULT 0,
       style TEXT,
       position INTEGER NOT NULL,
 
@@ -79,11 +70,11 @@ class DatabaseSchema {
   static const createExampleBlocksTable = '''
     CREATE TABLE example_blocks(
       block_id INTEGER PRIMARY KEY,
-      title NOT NULL,
+      title TEXT NOT NULL,
       paragraph_question INTEGER NOT NULL,
       paragraph_answer INTEGER NOT NULL,
 
-      FOREIGN KEY (block_id) REFERENCES lesson_blocks(id),
+      FOREIGN KEY (block_id) REFERENCES lessons(id),
 
       FOREIGN KEY (paragraph_question) REFERENCES paragraph_blocks(id),
 
@@ -92,7 +83,7 @@ class DatabaseSchema {
   ''';
   static const createExampleSolutionsTable = '''
     CREATE TABLE example_solutions(
-      id INTEGEER PRIMARY KEY,
+      example_id INTEGEER PRIMARY KEY,
       paragraph_context INTEGER NOT NULL,
       position INTEGER NOT NULL,
 
@@ -105,10 +96,10 @@ class DatabaseSchema {
     CREATE TABLE message_blocks(
       block_id INTEGER PRIMARY KEY,
       type TEXT NOT NULL,
-      text TEXT NOT NULL,
+      title TEXT NOT NULL,
       paragraph_context INTEGER NOT NULL,
 
-      FOREIGN KEY (block_id) REFERENCES lesson_blocks(id),
+      FOREIGN KEY (block_id) REFERENCES lessons(id),
 
       FOREIGN KEY (paragraph_context) REFERENCES paragraph_blocks(id)
     )
@@ -142,11 +133,13 @@ class DatabaseSchema {
   ''';
 
   static const createQuizSolutionTable = '''
-    id INTEGER PRIMARY KEY,
-    paragraph_context INTEGER NOT NULL,
+    CREATE TABLE quiz_solutions(
+      id INTEGER PRIMARY KEY,
+      paragraph_context INTEGER NOT NULL,
 
-    FOREIGN KEY (id) REFERENCES quizs(id),
+      FOREIGN KEY (id) REFERENCES quizs(id),
 
-    FOREIGN KEY (paragraph_context) REFERENCES paragraph_blocks(id)
+      FOREIGN KEY (paragraph_context) REFERENCES paragraph_blocks(id)
+    )
   ''';
 }
