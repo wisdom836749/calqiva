@@ -62,10 +62,6 @@ class DatabaseHelper{
     );
 
     await db.execute(
-      DatabaseSchema.createExampleSolutionsTable
-    );
-
-    await db.execute(
       DatabaseSchema.createMessageBlocksTable
     );
 
@@ -73,8 +69,5 @@ class DatabaseHelper{
       DatabaseSchema.createQuizsTable
     );
 
-    await db.execute(
-      DatabaseSchema.createQuizSolutionTable
-    );
   }
 }

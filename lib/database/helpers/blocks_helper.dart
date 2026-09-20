@@ -36,6 +36,7 @@ class BlocksHelper {
     required int blockId,
     required String title,
     required int paragraphQuestion,
+    required int paragraphSolution,
     required int paragraphAnswer,
   }) async {
     await db.insert(
@@ -44,23 +45,8 @@ class BlocksHelper {
         'block_id' : blockId,
         'title' : title,
         'paragraph_question' : paragraphQuestion,
+        'paragraph_solution' : paragraphSolution,
         'paragraph_answer'  : paragraphAnswer,
-      },
-    );
-  }
-
-  static Future<void> appendExampleSolution(
-    Database db, {
-    required int exampleId,
-    required int paragraphContext,
-    required int position,
-  }) async {
-    await db.insert(
-      'example_solution',
-      {
-        'example_id' : exampleId,
-        'paragraph_context' : paragraphContext,
-        'position' : position,
       },
     );
   }

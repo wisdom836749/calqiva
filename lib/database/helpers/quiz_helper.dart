@@ -9,6 +9,7 @@ class QuizHelper {
     required int option1,
     required int option2,
     required int option3,
+    required int solution,
     required int correctAnswer,
   }) async {
     return await db.insert(
@@ -20,20 +21,8 @@ class QuizHelper {
         'option_1' : option1,
         'option_2' : option2,
         'option_3' : option3,
-      },
-    );
-  }
-
-  static Future<void> appendQuizSolution(
-    Database db, {
-    required int id,
-    required int paragraphContext,
-  }) async {
-    await db.insert(
-      'quit_solutions',
-      {
-        'id' : id,
-        'paragraph_context' : paragraphContext
+        'solution' : solution,
+        'correct_answer' : correctAnswer,
       },
     );
   }

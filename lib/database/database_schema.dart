@@ -72,26 +72,19 @@ class DatabaseSchema {
       block_id INTEGER PRIMARY KEY,
       title TEXT NOT NULL,
       paragraph_question INTEGER NOT NULL,
+      paragraph_solution INTEGER NOT NULL,
       paragraph_answer INTEGER NOT NULL,
 
       FOREIGN KEY (block_id) REFERENCES lessons(id),
 
       FOREIGN KEY (paragraph_question) REFERENCES paragraph_blocks(id),
 
+      FOREIGN KEY (paragraph_solution) REFERENCES paragraph_blocks(id),
+
       FOREIGN KEY (paragraph_answer) REFERENCES paragraph_blocks(id)
     )
   ''';
-  static const createExampleSolutionsTable = '''
-    CREATE TABLE example_solutions(
-      example_id INTEGEER PRIMARY KEY,
-      paragraph_context INTEGER NOT NULL,
-      position INTEGER NOT NULL,
 
-      FOREIGN KEY (id) REFERENCES example_blocks(block_id),
-
-      FOREIGN KEY (paragraph_context) REFERENCES paragraph_blocks(id)
-    )
-  ''';
   static const createMessageBlocksTable = '''
     CREATE TABLE message_blocks(
       block_id INTEGER PRIMARY KEY,
@@ -114,6 +107,7 @@ class DatabaseSchema {
       option_1 INTEGER NOT NULL,
       option_2 INTEGER NOT NULL,
       option_3 INTEGER NOT NULL,
+      solution INTEGER NOT NULL,
       correct_answer INTEGER NOT NULL,
 
       FOREIGN KEY (sub_topic_id) REFERENCES sub_topics(id)
@@ -128,18 +122,10 @@ class DatabaseSchema {
 
       FOREIGN KEY (option_3) REFERENCES paragraph_blocks(id),
 
+      FOREIGN KEY (solution) REFERENCES paragraph_blocks(id),
+
       FOREIGN KEY (correct_answer) REFERENCES paragraph_blocks(id)
     )
   ''';
 
-  static const createQuizSolutionTable = '''
-    CREATE TABLE quiz_solutions(
-      id INTEGER PRIMARY KEY,
-      paragraph_context INTEGER NOT NULL,
-
-      FOREIGN KEY (id) REFERENCES quizs(id),
-
-      FOREIGN KEY (paragraph_context) REFERENCES paragraph_blocks(id)
-    )
-  ''';
 }

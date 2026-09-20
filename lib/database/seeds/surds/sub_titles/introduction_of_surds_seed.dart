@@ -582,5 +582,58 @@ class IntroductionOfSurdsSeed {
       isImage : false,
       position : 58
     );
+
+    final messageLessonId = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'message',
+      position : 3
+    );
+
+    final messageParagraphId = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphId,
+      text : 'When simplifying a surd, first look for a perfect-square factor of the number inside the square root.',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphId,
+      text : ' An easy way to find one is to divide the given number by smaller numbers, starting from ',
+      isMath : false,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphId,
+      text : r'2,',
+      isMath : true,
+      isImage : false,
+      position : 3
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphId,
+      text : ' until you find a factor that is a perfect-square.',
+      isMath : false,
+      isImage : false,
+      position : 4
+    );
+
+    await BlocksHelper.appendMessageBlock(
+      db,
+      blockId : messageLessonId,
+      type : 'tip',
+      title : 'Tip',
+      paragraphContext : messageParagraphId
+    );
   }
 }
