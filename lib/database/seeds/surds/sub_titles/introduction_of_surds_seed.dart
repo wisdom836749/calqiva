@@ -167,7 +167,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : 'for example:\n\n',
+      text : 'For example:\n\n',
       isMath : false,
       isImage : false,
       position : 14,
@@ -342,7 +342,245 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
+      text : ' cannot be simplifield to a whole number.\n',
+      isMath : false,
+      isImage : false,
+      position : 33
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : 'Similarly:\n',
+      isMath : false,
+      isImage : false,
+      style : {
+        'color' : 'amber',
+        'fontSize' : 16,
+      },
+      position : 34
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 35
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' cannot be simpligield to a whole number.\n',
+      isMath : false,
+      isImage : false,
+      position : 36
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : 'Therefore: ',
+      isMath : false,
+      isImage : false,
+      position : 37
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 38
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' are surds.\n',
+      isMath : false,
+      isImage : false,
+      position : 39
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' Another important point is that a surd does not always have to remain exactly as it first appears, i.e a surd can sometimes be simplifield into a simpler form without changing its exact value,\n',
+      isMath : false,
+      isImage : false,
+      position : 40
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : 'consider:',
+      isMath : false,
+      isImage : false,
+      style : {
+        'color' : 'amber',
+        'fontSize' : 16,
+      },
+      position : 41
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{8}',
+      isMath : true,
+      isImage : false,
+      position : 42
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' at first, it looks like a surd, but ',
+      isMath : false,
+      isImage : false,
+      position : 43
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'8',
+      isMath : true,
+      isImage : false,
+      position : 44
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' can be separated into:\n',
+      isMath : false,
+      isImage : false,
+      position : 45
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'''8 = 4 \times 2
       
-    )
+      \therefore \sqrt{8} = \sqrt{4 \times 2}''',
+      isMath : true,
+      isImage : false,
+      position : 46
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : '\nusing the product rule of surds\n',
+      isMath : false,
+      isImage : false,
+      position : 47
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{ab} = \sqrt{a} \times \sqrt{b}',
+      isMath : true,
+      isImage : false,
+      position : 48
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : '\nwe get:\n',
+      isMath : false,
+      isImage : false,
+      position : 49
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{8} = \sqrt{4} \times \sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 50
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : '\nsince\n',
+      isMath : false,
+      isImage : false,
+      position : 51
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId: paragraphId,
+      text : r'\sqrt{4} = 2',
+      isMath : true,
+      isImage : false,
+      position : 52
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : '\nwe have:\n',
+      isMath : false,
+      isImage : false,
+      position : 53
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{8} = 2\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 54
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : '\nso ',
+      isMath : false,
+      isImage : false,
+      position : 55
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'\sqrt{8}',
+      isMath : true,
+      isImage : false,
+      position : 56
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : ' is a surd, but it can be simplified to ',
+      isMath : false,
+      isImage : false,
+      position : 57
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId,
+      text : r'2\sqrt{2}.',
+      isMath : true,
+      isImage : false,
+      position : 58
+    );
   }
 }
