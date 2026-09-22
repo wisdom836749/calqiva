@@ -635,5 +635,191 @@ class IntroductionOfSurdsSeed {
       title : 'Tip',
       paragraphContext : messageParagraphId
     );
+
+    final exampleLessonId_1 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 4
+    );
+
+    final exampleParagraphIdQuestion_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_1,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_1,
+      text : r'\sqrt{y^{2}x}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_1,
+      text : r'''\sqrt{y^{2}x} = \sqrt{y} \times \sqrt{x}
+      
+      = y\sqrt{x^{2}}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_1,
+      text : r'y\sqrt{x^{2}}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_1,
+      title : 'Example 1',
+      paragraphQuestion : exampleParagraphIdQuestion_1,
+      paragraphSolution : exampleParagraphIdSolution_1,
+      paragraphAnswer : exampleParagraphIdAnswer_1,
+    );
+
+    final exampleLessonId_2 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 5
+    );
+
+    final exampleParagraphIdQuestion_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_2,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_2,
+      text : r'\sqrt{12}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_2,
+      text : r'''12 = 4 \times 3
+      
+      \therefore \sqrt{12} = \sqrt{4 \times 3}
+      
+      = \sqrt{4} \times \sqrt{3}
+      
+      = 2\sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_2,
+      text : r'2\sqrt',
+      isImage : true,
+      isMath : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_2,
+      title : 'Example 2',
+      paragraphQuestion : exampleParagraphIdQuestion_2,
+      paragraphSolution : exampleParagraphIdSolution_2,
+      paragraphAnswer : exampleParagraphIdAnswer_2
+    );
+
+    final exampleLessonId_3 = BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 6
+    );
+
+    final exampleParagraphIdQuestion_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_3,
+      text : 'Express ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_3,
+      text : r'4\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_3,
+      text : ' as the square root of a single number',
+      isMath : false,
+      isImage : false,
+      position : 3
+    );
+
+    final exampleParagraphIdSolution_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_3,
+      text : r'''4\sqrt{6} = \sqrt{16} \times \sqrt{6}
+      
+      = \sqrt{16 \times 6}
+      
+      = \sqrt{96}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final  exampleParagraphIdAnswer_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_3,
+      text : r'\sqrt{96}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
   }
 }
