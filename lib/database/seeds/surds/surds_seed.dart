@@ -11,6 +11,6 @@ class SurdsSeed {
       image: 'surds_icon.png',
     );
 
-
+    
   }
 }

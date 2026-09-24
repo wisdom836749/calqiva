@@ -3,6 +3,7 @@ import '../surds_seed.dart';
 import '../../../helpers/sub_topic_helper.dart';
 import '../../../helpers/blocks_helper.dart';
 import '../../../helpers/paragraph_helper.dart';
+import '../../../helpers/quiz_helper.dart';
 
 class IntroductionOfSurdsSeed {
   static Future<void> seed(
@@ -583,18 +584,18 @@ class IntroductionOfSurdsSeed {
       position : 58
     );
 
-    final messageLessonId = await BlocksHelper.appendLesson(
+    final messageLessonId_1 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'message',
       position : 3
     );
 
-    final messageParagraphId = await ParagraphHelper.appendParagraphBlocks(db);
+    final messageParagraphIdContext_1 = await ParagraphHelper.appendParagraphBlocks(db);
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : messageParagraphId,
+      paragraphId : messageParagraphIdContext_1,
       text : 'When simplifying a surd, first look for a perfect-square factor of the number inside the square root.',
       isMath : false,
       isImage : false,
@@ -603,7 +604,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : messageParagraphId,
+      paragraphId : messageParagraphIdContext_1,
       text : ' An easy way to find one is to divide the given number by smaller numbers, starting from ',
       isMath : false,
       isImage : false,
@@ -612,7 +613,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : messageParagraphId,
+      paragraphId : messageParagraphIdContext_1,
       text : r'2,',
       isMath : true,
       isImage : false,
@@ -621,7 +622,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : messageParagraphId,
+      paragraphId : messageParagraphIdContext_1,
       text : ' until you find a factor that is a perfect-square.',
       isMath : false,
       isImage : false,
@@ -630,10 +631,10 @@ class IntroductionOfSurdsSeed {
 
     await BlocksHelper.appendMessageBlock(
       db,
-      blockId : messageLessonId,
+      blockId : messageLessonId_1,
       type : 'tip',
       title : 'Tip',
-      paragraphContext : messageParagraphId
+      paragraphContext : messageParagraphIdContext_1
     );
 
     final exampleLessonId_1 = await BlocksHelper.appendLesson(
@@ -760,7 +761,7 @@ class IntroductionOfSurdsSeed {
       paragraphAnswer : exampleParagraphIdAnswer_2
     );
 
-    final exampleLessonId_3 = BlocksHelper.appendLesson(
+    final exampleLessonId_3 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'example',
@@ -821,5 +822,332 @@ class IntroductionOfSurdsSeed {
       isImage : false,
       position : 1
     );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_3,
+      title : 'Example 3',
+      paragraphQuestion : exampleParagraphIdQuestion_3,
+      paragraphSolution : exampleParagraphIdSolution_3,
+      paragraphAnswer : exampleParagraphIdAnswer_3
+    );
+
+    final messageLessonId_2 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'summary',
+      position:7
+    );
+
+    final messageParagraphIdContext_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphIdContext_2,
+      text : 'Surds are irrational numbers written is root form, such as ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphIdContext_2,
+      text : r'\sqrt{2}, \sqrt{3}, \sqrt{5},',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphIdContext_2,
+      text : ' e.t.c They cannot be expressed exactly as fractions and can often be simplified using perfect-square factors.',
+      isMath : false,
+      isImage : false,
+      position : 3
+    );
+
+    await BlocksHelper.appendMessageBlock(
+      db,
+      blockId : messageLessonId_2,
+      type : 'summary',
+      title : 'Summary',
+      paragraphContext : messageParagraphIdContext_2
+    );
+
+    final quizParagraphIdQuestion_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_1,
+      text : 'Simplify :',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_1,
+      text : r'\sqrt{56}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption0_1 = await ParagraphHelper.appendParagraphBlocks(db);
+    
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_1,
+      text : r'6\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_1,
+      text : r'9\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_1,
+      text : r'3\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_1,
+      text : r'6\sqrt{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_1,
+      text : r'''54 = 9 \times 6
+      
+      \therefore \sqrt{54} = \sqrt{9 \times 6}
+      
+      = \sqrt{9} \times \sqrt{6}
+      
+      =3\sqrt{6}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_1,
+      text : r'3\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_1,
+      option0 : quizParagraphIdOption0_1,
+      option1 : quizParagraphIdOption1_1,
+      option2 : quizParagraphIdOption2_1,
+      option3 : quizParagraphIdOption3_1,
+      solution : quizParagraphIdSolution_1,
+      correctAnswer : quizParagraphIdCorrectAnswer_1
+    );
+
+    final quizParagraphIdQuestion_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_2,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_2,
+      text : r'\sqrt{200}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_2,
+      text : r'5\sqrt{4}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_2,
+      text : r'10\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_2,
+      text : r'2\sqrt{25}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_2,
+      text : r'20\sqrt{5}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart (
+      db,
+      paragraphId : quizParagraphIdSolution_2,
+      text : r'''200 = 100 \times 2
+      
+      \therefore \sqrt{200} = \sqrt{100 \times 2}
+      
+      = \sqrt{100} \times \sqrt{2}
+      
+      = 10\sqrt{2}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_2,
+      text : r'10\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_2,
+      option0 : quizParagraphIdOption0_2,
+      option1 : quizParagraphIdOption1_2,
+      option2 : quizParagraphIdOption2_2,
+      option3 : quizParagraphIdOption3_2,
+      solution : quizParagraphIdSolution_2,
+      correctAnswer : quizParagraphIdCorrectAnswer_2
+    );
+
+    final quizParagraphIdQuestion_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_3,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_3,
+      text : r'\sqrt{48}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_3,
+      text : r'4\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1 
+    );
+
+    final quizParagraphIdOption1_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_3,
+      text : r'2\sqrt{12}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_3,
+      text : r'3\sqrt{12}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_3,
+      text : r'2\sqrt{16}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_3 = await ParagraphHelper.appendParagraphBlocks(db);
   }
 }
