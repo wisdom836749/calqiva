@@ -890,10 +890,10 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : quizParagraphIdQuestion_1,
-      text : r'\sqrt{56}',
+      text : r'\sqrt{56},',
       isMath : true,
       isImage : false,
-      position : 1
+      position : 2
     );
 
     final quizParagraphIdOption0_1 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -994,7 +994,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : quizParagraphIdQuestion_2,
-      text : r'\sqrt{200}',
+      text : r'\sqrt{200}.',
       isMath : true,
       isImage : false,
       position : 2
@@ -1098,7 +1098,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : quizParagraphIdQuestion_3,
-      text : r'\sqrt{48}',
+      text : r'\sqrt{48}.',
       isMath : true,
       isImage : false,
       position : 2
@@ -1149,5 +1149,586 @@ class IntroductionOfSurdsSeed {
     );
 
     final quizParagraphIdSolution_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_3,
+      text : r'''48 = 16 \times 3
+      
+      \therefore \sqrt{48} = \sqrt{16 \times 3}
+      
+      = \sqrt{16} \times \sqrt{3}
+      
+      = 4\sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_3,
+      text : r'4\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_3,
+      option0 : quizParagraphIdOption0_3,
+      option1 : quizParagraphIdOption1_3,
+      option2 : quizParagraphIdOption2_3,
+      option3 : quizParagraphIdOption3_3,
+      solution : quizParagraphIdSolution_3,
+      correctAnswer : quizParagraphIdCorrectAnswer_3
+    );
+
+    final quizParagraphIdQuestion_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_4,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_4,
+      text : r'\sqrt{32}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_4,
+      text : r'2\sqrt{8}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_4,
+      text : r'4\sqrt{8}',
+      isMath : true,
+      isImage : false,
+      position : 1 
+    );
+
+    final quizParagraphIdOption2_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_4,
+      text : r'8\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_4,
+      text : r'4\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_4,
+      text : r'''32 = 16 \times 2
+      
+      \therefore \sqrt{32} = \sqrt{16 \times 2}
+      
+      = \sqrt{16} \times \sqrt{2}
+      
+      = 4\sqrt{2}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_4,
+      text : r'4\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_4,
+      option0 : quizParagraphIdOption0_4,
+      option1 : quizParagraphIdOption1_4,
+      option2 : quizParagraphIdOption2_4,
+      option3 : quizParagraphIdOption3_4,
+      solution : quizParagraphIdSolution_4,
+      correctAnswer : quizParagraphIdCorrectAnswer_4
+    );
+
+    final quizParagraphIdQuestion_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_5,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_5,
+      text : r'\sqrt{63}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_5,
+      text : r'21\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_5,
+      text : r'3\sqrt{21}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_5,
+      text : r'3\sqrt{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_5,
+      text : r'3\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_5,
+      text : r'''63 = 9 \times 7
+      
+      \therefore \sqrt{63} = \sqrt{9 \times 7}
+      
+      = \sqrt{9} \times \sqrt{7}
+      
+      = 3\sqrt{7}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_5,
+      text : r'3\sqrt{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_5,
+      option0 : quizParagraphIdOption0_5,
+      option1 : quizParagraphIdOption1_5,
+      option2 : quizParagraphIdOption2_5,
+      option3 : quizParagraphIdOption3_5,
+      solution : quizParagraphIdSolution_5,
+      correctAnswer : quizParagraphIdCorrectAnswer_5
+    );
+
+    final quizParagraphIdQuestion_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_6,
+      text : 'Express ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_6,
+      text : r'10\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_6,
+      text : ' as the square root of a singel number.',
+      isMath : false,
+      isImage : false,
+      position : 3
+    );
+
+    final quizParagraphIdOption0_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_6,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_6,
+      text : r'\sqrt{300}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_6,
+      text : r'\sqrt{10}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_6,
+      text : r'\sqrt{30}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_6,
+      text : r'''10\sqrt{3} = \sqrt{10^{2} \times 3}
+      
+      = \sqrt{100 \times 3}
+      
+      = \sqrt{300}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_6,
+      text : r'\sqrt{300}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_6,
+      option0 : quizParagraphIdOption0_6,
+      option1 : quizParagraphIdOption1_6,
+      option2 : quizParagraphIdOption2_6,
+      option3 : quizParagraphIdOption3_6,
+      solution : quizParagraphIdSolution_6,
+      correctAnswer : quizParagraphIdCorrectAnswer_6
+    );
+
+    final quizParagraphIdQuestion_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_7,
+      text : 'Express ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_7,
+      text : r'6\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_7,
+      text : ' as the square root of a single number.',
+      isMath : false,
+      isImage : false,
+      position : 3
+    );
+
+    final quizParagraphIdOption0_7 = await ParagraphHelper.appendParagraphBlocks(db);
+    
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_7,
+      text : r'\sqrt{18}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_7,
+      text : r'\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_7,
+      text : r'\sqrt{108}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_7,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_7,
+      text : r'''6\sqrt{3} = \sqrt{6^{2} \times 3}
+      
+      = \sqrt{36 \times 3}
+      
+      = \sqrt{108}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_7,
+      text : r'\sqrt{108}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_7,
+      option0 : quizParagraphIdOption0_7,
+      option1 : quizParagraphIdOption1_7,
+      option2 : quizParagraphIdOption2_7,
+      option3 : quizParagraphIdOption3_7,
+      solution : quizParagraphIdSolution_7,
+      correctAnswer : quizParagraphIdCorrectAnswer_7
+    );
+
+    final quizParagraphIdQuestion_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_8,
+      text : 'Express ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_8,
+      text : r'5\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_8,
+      text : ' as the square of a single number',
+      isMath : false,
+      isImage : false,
+      position : 3
+    );
+
+    final quizParagraphIdOption0_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_8,
+      text : r'\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_8,
+      text : r'\sqrt{25}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_8,
+      text : r'\sqrt{50}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_8,
+      text : r'\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_8,
+      text : r'''5\sqrt{2} = \sqrt{5^{2} \times 2}
+      
+      = \sqrt{25 \times 2}
+      
+      = \sqrt{50}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_8,
+      text : r'\sqrt{50}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_8,
+      option0 : quizParagraphIdOption0_8,
+      option1 : quizParagraphIdOption1_8,
+      option2 : quizParagraphIdOption2_8,
+      option3 : quizParagraphIdOption3_8,
+      solution : quizParagraphIdSolution_8,
+      correctAnswer : quizParagraphIdCorrectAnswer_8
+    );
+
+    final 
   }
 }
