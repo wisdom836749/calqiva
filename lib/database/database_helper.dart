@@ -1,6 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'database_schema.dart';
+import 'seeds/database_seed.dart';
 
 class DatabaseHelper{
   static Database? _database;
@@ -69,5 +70,6 @@ class DatabaseHelper{
       DatabaseSchema.createQuizsTable
     );
 
+    await DatabaseSeed.seed(db);
   }
 }
