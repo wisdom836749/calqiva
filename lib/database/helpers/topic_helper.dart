@@ -4,13 +4,13 @@ class TopicHelper{
   static Future<int> appendTopic(
     Database db, {
     required String title,
-    required String image,
+    required String imagePath,
   }) async {
     return await db.insert(
       'topics',
       {
         'title' : title,
-        'image' : image,
+        'image' : imagePath,
       },
     );
   }

@@ -3,7 +3,7 @@ class DatabaseSchema {
     CREATE TABLE topics(
       id INTEGER PRIMARY KEY,
       title TEXT NOT NULL,
-      image TEXT NOT NULL
+      image_path TEXT NOT NULL
     )
   ''';
 

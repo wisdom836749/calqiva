@@ -9,7 +9,7 @@ class SurdsSeed {
     final topicId = await TopicHelper.appendTopic(
       db,
       title: 'Surds',
-      image: 'surds_icon.png',
+      imagePath: 'assets/images/surds_icon.png',
     );
 
     await IntroductionOfSurdsSeed.seed(
