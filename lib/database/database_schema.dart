@@ -20,7 +20,7 @@ class DatabaseSchema {
   static const createLessonsTable = '''
     CREATE TABLE lessons(
       id INTEGER PRIMARY KEY,
-      sub_topic_id INTEGER PRIMARY KEY,
+      sub_topic_id INTEGER NOT NULL,
       block_type TEXT NOT NULL,
       position INTEGER NOT NULL,
 
