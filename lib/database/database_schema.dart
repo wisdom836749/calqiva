@@ -56,7 +56,8 @@ class DatabaseSchema {
 
   static const createTextPartsTable = '''
     CREATE TABLE text_parts(
-      paragraph_id INTEGER PRIMARY KEY,
+      id INTEGER PRIMARY KEY,
+      paragraph_id NOT NULL,
       text TEXT NOT NULL,
       is_math INTEGER NOT NULL DEFAULT 0,
       is_image INTEGER NOT NULL DEFAULT 0,

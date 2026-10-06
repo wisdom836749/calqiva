@@ -48,10 +48,10 @@ class _TopicScreenState extends State<TopicScreen> {
           style : TextStyle(
             fontSize : 25,
             fontWeight : FontWeight.w800,
-            color : Colors.purpleAccent,
+            color : Colors.black,
           ),
         ),
-        backgroundColor : Colors.transparent,
+        backgroundColor : Colors.blueGrey,
       ),
 
       body : FutureBuilder<List<Topic>> (
@@ -132,7 +132,7 @@ class _TopicScreenState extends State<TopicScreen> {
                     borderRadius: BorderRadius.circular(18),
                   ),
 
-                  color : color.withValues(alpha: 0.35),
+                  color : color.withValues(alpha: 0.20),
 
                   child : Padding(
                     padding  : const EdgeInsets.all(15),
@@ -145,8 +145,8 @@ class _TopicScreenState extends State<TopicScreen> {
                       children: [
                         Image.asset(
                           topic.imagePath,
-                          width : 200,
-                          height : 200,
+                          width : 100,
+                          height : 100,
                         ),
 
                         Text(

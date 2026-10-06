@@ -10,7 +10,7 @@ class TopicHelper{
       'topics',
       {
         'title' : title,
-        'image' : imagePath,
+        'image_path' : imagePath,
       },
     );
   }

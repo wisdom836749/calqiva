@@ -36,10 +36,10 @@ class _SubTopicScreenState extends State<SubTopicScreen> {
           style : TextStyle(
             fontSize : 25,
             fontWeight : FontWeight.w800,
-            color : Colors.purpleAccent,
+            color : Colors.black,
           ),
         ),
-        backgroundColor : Colors.transparent,
+        backgroundColor : Colors.blueGrey,
       ),
 
       body : FutureBuilder<List<SubTopic>>(

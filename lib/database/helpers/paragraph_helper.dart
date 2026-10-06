@@ -7,7 +7,8 @@ class ParagraphHelper {
   ) async {
     return await db.insert(
       'paragraph_blocks',
-      {}
+      {},
+      nullColumnHack : 'id'
     );
   }
 
@@ -35,7 +36,7 @@ class ParagraphHelper {
     required int position,
   }) async {
     await db.insert(
-      'text_part',
+      'text_parts',
       {
         'paragraph_id' : paragraphId,
         'text' : text,
