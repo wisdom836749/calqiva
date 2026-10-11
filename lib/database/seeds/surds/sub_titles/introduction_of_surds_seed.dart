@@ -1,8 +1,8 @@
 import 'package:sqflite/sqflite.dart';
-import '../../../helpers/sub_topic_helper.dart';
-import '../../../helpers/blocks_helper.dart';
-import '../../../helpers/paragraph_helper.dart';
-import '../../../helpers/quiz_helper.dart';
+import '../../../insert_helpers/sub_topic_helper.dart';
+import '../../../insert_helpers/blocks_helper.dart';
+import '../../../insert_helpers/paragraph_helper.dart';
+import '../../../insert_helpers/quiz_helper.dart';
 
 class IntroductionOfSurdsSeed {
   static Future<void> seed(
@@ -586,7 +586,7 @@ class IntroductionOfSurdsSeed {
     final messageLessonId_1 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
-      blockType : 'message',
+      blockType : 'tip',
       position : 3
     );
 

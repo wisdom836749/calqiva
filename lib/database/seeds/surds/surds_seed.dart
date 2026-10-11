@@ -1,5 +1,5 @@
 import 'package:sqflite/sqflite.dart';
-import '../../helpers/topic_helper.dart';
+import '../../insert_helpers/topic_helper.dart';
 import 'sub_titles/introduction_of_surds_seed.dart';
 
 class SurdsSeed {
