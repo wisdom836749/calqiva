@@ -1,12 +1,16 @@
+import 'lesson.dart';
+
 class SubTopic {
   final int id;
   final int topicId;
   final String subTitle;
+  List<Lesson>? blocks;
 
-  const SubTopic({
+  SubTopic({
     required this.id,
     required this.topicId,
     required this.subTitle,
+    this.blocks
   });
 
   factory SubTopic.fromMap(Map<String, dynamic> map) {

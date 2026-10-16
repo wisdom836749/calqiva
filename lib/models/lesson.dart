@@ -1,3 +1,8 @@
+import 'heading_block.dart';
+import 'paragraph_block.dart';
+import 'example_block.dart';
+import 'message_block.dart';
+
 enum LessonType {
   heading,
   paragraph,
@@ -13,12 +18,20 @@ class Lesson {
   final int subTopicId;
   final LessonType blockType;
   final int position;
+  HeadingBlock? heading;
+  ParagraphBlock? paragraph;
+  ExampleBlock? example;
+  MessageBlock? message;
 
-  const Lesson({
+  Lesson({
     required this.id,
     required this.subTopicId,
     required this.blockType,
     required this.position,
+    this.heading,
+    this.paragraph,
+    this.example,
+    this.message,
   });
 
   factory Lesson.fromMap(Map<String, dynamic> map) {
