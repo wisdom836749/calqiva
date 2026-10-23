@@ -25,6 +25,41 @@ class _SubTopicScreenState extends State<SubTopicScreen> {
     futureSubTopics = SubTopicRepository.getByTopicId(widget.topicId);
   }
 
+  Future<void> openSubTopic(int id) async {
+    try{
+      final subTopic = await SubTopicRepository.getCompleteById(id);
+
+      if (!mounted) return;
+
+      if (subTopic == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content : Text ("subtopic not found"),
+          ),
+        );
+      }
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder : (_) {
+            return LessonContextScreen(
+              subTopic : subTopic,
+            );
+          },
+        ),
+      );
+    } catch(e) {
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content : Text ("failed to load lesson: $e"),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +138,9 @@ class _SubTopicScreenState extends State<SubTopicScreen> {
                     ),
                   ),
 
-                  onTap : () {}
+                  onTap : () {
+                    openSubTopic(subTopic.id);
+                  }
                 ),
               );
             },
