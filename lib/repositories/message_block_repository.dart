@@ -1,5 +1,6 @@
 import '../database/database_helper.dart';
 import '../models/message_block.dart';
+import 'paragraph_block_repository.dart';
 
 class MessageBlockRepository {
   static Future<MessageBlock?> getByBlockId(
@@ -19,5 +20,20 @@ class MessageBlockRepository {
     }
 
     return MessageBlock.fromMap(block.first);
+  }
+
+  static Future<MessageBlock?> getCompleteByBlockId(
+    int blockId,
+  ) async {
+    final message = await getByBlockId(blockId);
+
+    if (message != null) {
+
+      message.context = await ParagraphBlockRepository.getById(
+        message.paragraphContext,
+      );
+    }
+
+    return message;
   }
 }

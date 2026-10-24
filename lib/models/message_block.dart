@@ -1,3 +1,5 @@
+import 'paragraph_block.dart';
+
 enum MessageType {
   warning,
   note,
@@ -8,21 +10,20 @@ enum MessageType {
 class MessageBlock {
   final int blockId;
   final MessageType type;
-  final String title;
   final int paragraphContext;
+  ParagraphBlock? context;
 
-  const MessageBlock({
+  MessageBlock({
     required this.blockId,
     required this.type,
-    required this.title,
-    required this.paragraphContext
+    required this.paragraphContext,
+    this.context,
   });
 
   factory MessageBlock.fromMap(Map<String, dynamic> map) {
     return MessageBlock(
       blockId : map['block_id'] as int,
       type : MessageType.values.firstWhere((value) => value.name == map['type']),
-      title : map['title'] as String,
       paragraphContext : map['paragraph_context'] as int,
     );
   }

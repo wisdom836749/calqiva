@@ -55,7 +55,6 @@ class BlocksHelper {
     Database db, {
     required int blockId,
     required String type,
-    required String title,
     required int paragraphContext
   }) async {
     await db.insert(
@@ -63,7 +62,6 @@ class BlocksHelper {
       {
         'block_id' : blockId,
         'type' : type,
-        'title' : title,
         'paragraph_context' : paragraphContext
       },
     );

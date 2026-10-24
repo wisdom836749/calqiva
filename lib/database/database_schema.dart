@@ -90,7 +90,6 @@ class DatabaseSchema {
     CREATE TABLE message_blocks(
       block_id INTEGER PRIMARY KEY,
       type TEXT NOT NULL,
-      title TEXT NOT NULL,
       paragraph_context INTEGER NOT NULL,
 
       FOREIGN KEY (block_id) REFERENCES lessons(id),

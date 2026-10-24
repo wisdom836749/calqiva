@@ -58,7 +58,7 @@ class LessonRepository {
       return null;
     }
 
-    return ExampleBlockRepository.getByBlockId(
+    return ExampleBlockRepository.getCompleteByBlockId(
       block.id,
     );
   }
@@ -75,7 +75,7 @@ class LessonRepository {
       return null;
     }
 
-    return MessageBlockRepository.getByBlockId(
+    return MessageBlockRepository.getCompleteByBlockId(
       block.id,
     );
   }

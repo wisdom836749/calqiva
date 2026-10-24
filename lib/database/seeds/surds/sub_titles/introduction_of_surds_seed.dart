@@ -632,7 +632,6 @@ class IntroductionOfSurdsSeed {
       db,
       blockId : messageLessonId_1,
       type : 'tip',
-      title : 'Tip',
       paragraphContext : messageParagraphIdContext_1
     );
 
@@ -871,7 +870,6 @@ class IntroductionOfSurdsSeed {
       db,
       blockId : messageLessonId_2,
       type : 'summary',
-      title : 'Summary',
       paragraphContext : messageParagraphIdContext_2
     );
 

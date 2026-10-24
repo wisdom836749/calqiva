@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../repositories/sub_topic_repository.dart';
 import '../models/sub_topic.dart';
+import 'lesson_context_screen.dart';
 
 class SubTopicScreen extends StatefulWidget {
   final int topicId;
@@ -44,7 +45,8 @@ class _SubTopicScreenState extends State<SubTopicScreen> {
         MaterialPageRoute(
           builder : (_) {
             return LessonContextScreen(
-              subTopic : subTopic,
+              topicTitle : widget.topicTitle,
+              subTopic : subTopic!,
             );
           },
         ),
