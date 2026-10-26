@@ -60,7 +60,7 @@ class LessonContextScreen extends StatelessWidget {
                   }
 
                   return Padding(
-                    padding : EdgeInsets.only(bottom: 12),
+                    padding : EdgeInsets.only(bottom: 16),
 
                     child : ParagraphRendererWidget(
                       paragraph : paragraph,
@@ -91,7 +91,7 @@ class LessonContextScreen extends StatelessWidget {
     }
 
     return Padding(
-      padding : EdgeInsets.only(bottom : 16),
+      padding : EdgeInsets.only(bottom : 12),
       child : Text(
         heading.heading,
         style : TextStyle(
@@ -111,7 +111,7 @@ class LessonContextScreen extends StatelessWidget {
     }
 
     return Padding(
-      padding : EdgeInsets.only(bottom : 12),
+      padding : EdgeInsets.only(bottom : 16),
       child : Column(
         crossAxisAlignment : CrossAxisAlignment.start,
         children : [
@@ -194,7 +194,7 @@ class LessonContextScreen extends StatelessWidget {
     String title = isSummary ? "Summary" : isTip ? "Tip" : isWarning ? "Warning" : "Note";
 
     return Padding(
-      padding : EdgeInsets.only(bottom : 12),
+      padding : EdgeInsets.only(bottom : 16),
       
       child : Card(
         elevation : 8,

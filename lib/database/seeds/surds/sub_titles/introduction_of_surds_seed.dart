@@ -15,7 +15,7 @@ class IntroductionOfSurdsSeed {
       subTitle : 'Introduction Of Surds',
     );
 
-    final headingLessonId = await BlocksHelper.appendLesson(
+    final headingLessonId_1 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'heading',
@@ -24,28 +24,28 @@ class IntroductionOfSurdsSeed {
 
     await BlocksHelper.appendHeadingBlock(
       db,
-      blockId : headingLessonId,
+      blockId : headingLessonId_1,
       heading: 'Meaning Of Surds',
     );
 
-    final paragraphLessonId = await BlocksHelper.appendLesson(
+    final paragraphLessonId_1 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'paragraph',
       position : 2
     );
 
-    final paragraphId = await ParagraphHelper.appendParagraphBlocks(db);
+    final paragraphId_1 = await ParagraphHelper.appendParagraphBlocks(db);
 
     await ParagraphHelper.appendParagraphLink(
       db,
-      blockId : paragraphLessonId,
-      paragraphId : paragraphId,
+      blockId : paragraphLessonId_1,
+      paragraphId : paragraphId_1,
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : '  A surds is a mathematical expression that contain a root, such as a square root, cute root, or another types of root, which cannot be simplified to give a rational number (i.e fractional number).\n',
       isMath : false,
       isImage : false,
@@ -54,7 +54,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' In simple words, a surd is a root that give  an irrational number.\n\n',
       isMath : false,
       isImage : false,
@@ -63,7 +63,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : '  Surds are useful because they allow us to write exact mathematic values.',
       isMath : false,
       isImage : false,
@@ -72,7 +72,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' For example, suppose the diagonal of a square has an exact length of ',
       isMath : false,
       isImage : false,
@@ -81,7 +81,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'\sqrt{2cm}',
       isMath : true,
       isImage : false,
@@ -90,7 +90,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' if we use a decimal, we might write ',
       isMath : false,
       isImage : false,
@@ -99,7 +99,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'1.414cm',
       isMath : true,
       isImage : false,
@@ -108,7 +108,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' which is an approximation.',
       isMath : false,
       isImage : false,
@@ -117,7 +117,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' The value',
       isMath : false,
       isImage : false,
@@ -126,7 +126,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'\sqrt{2cm}',
       isMath : true,
       isImage : false,
@@ -135,7 +135,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' is exact, therefore surds are especially useful in mathematics when we want to keep answers exact instead of rounded.\n\n',
       isMath : false,
       isImage : false,
@@ -144,7 +144,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' To recognize surds easily, you should know some perfect squares.\n',
       isMath : false,
       isImage : false,
@@ -157,7 +157,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' A perfect squares is a number obtained by multiplying a whole number by itself.\n\n',
       isMath : false,
       isImage : false,
@@ -166,16 +166,20 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : 'For example:\n\n',
       isMath : false,
       isImage : false,
       position : 14,
+      style : {
+        'color' : 'amber',
+        'fontSize' : 16
+      }
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'1 \times 1 = 1',
       isMath : true,
       isImage : false,
@@ -184,7 +188,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : '\nso ',
       isMath : false,
       isImage : false,
@@ -193,7 +197,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'1',
       isMath : true,
       isImage : false,
@@ -202,7 +206,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' is a perfect square.\n\n',
       isMath : false,
       isImage : false,
@@ -211,7 +215,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'2 \times 2 = 4',
       isMath : true,
       isImage : false,
@@ -220,7 +224,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : '\nso ',
       isMath : false,
       isImage : false,
@@ -229,7 +233,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'4',
       isMath : true,
       isImage : false,
@@ -238,7 +242,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' is a perfect square.\n\n',
       isMath : false,
       isImage : false,
@@ -247,7 +251,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'3 \times 3 = 9',
       isMath : true,
       isImage : false,
@@ -256,7 +260,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : '\nso ',
       isMath : false,
       isImage : false,
@@ -265,7 +269,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'9',
       isMath : true,
       isImage : false,
@@ -274,7 +278,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' is a perfect square.\n\n',
       isMath : false,
       isImage : false,
@@ -283,7 +287,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : 'Some important perfect square are:\n',
       isMath : false,
       isImage : false,
@@ -292,7 +296,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'''1^{2} = 1
       2^{2} = 4
       3^{2} = 9
@@ -305,8 +309,8 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
-      text : '\n\nnumber such as\n:',
+      paragraphId : paragraphId_1,
+      text : '\n\nnumber such as:\n',
       isMath : false,
       isImage : false,
       position : 29
@@ -314,7 +318,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'2, 3, 5, 6, 7, 10, 11',
       isMath: true,
       isImage : false,
@@ -323,7 +327,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : 'are not perfect squares. Therefore, their square roots generally give irrational numbers. For example: ',
       isMath : false,
       isImage : false,
@@ -332,7 +336,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'\sqrt{2}',
       isMath : true,
       isImage : false,
@@ -341,7 +345,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' cannot be simplifield to a whole number.\n\n',
       isMath : false,
       isImage : false,
@@ -350,7 +354,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : 'Similarly:\n',
       isMath : false,
       isImage : false,
@@ -363,7 +367,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'\sqrt{3}',
       isMath : true,
       isImage : false,
@@ -372,7 +376,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : ' cannot be simpligield to a whole number.\n',
       isMath : false,
       isImage : false,
@@ -381,7 +385,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : 'Therefore: ',
       isMath : false,
       isImage : false,
@@ -390,7 +394,7 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_1,
       text : r'\sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{6}',
       isMath : true,
       isImage : false,
@@ -399,195 +403,223 @@ class IntroductionOfSurdsSeed {
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
-      text : ' are surds.\n\n',
+      paragraphId : paragraphId_1,
+      text : ' are surds.',
       isMath : false,
       isImage : false,
       position : 39
     );
 
-    await ParagraphHelper.appendTextPart(
+    final headingLessonId_2 = await BlocksHelper.appendLesson(
       db,
-      paragraphId : paragraphId,
-      text : '  Another important point is that a surd does not always have to remain exactly as it first appears, i.e a surd can sometimes be simplifield into a simpler form without changing its exact value.\n\n',
-      isMath : false,
-      isImage : false,
-      position : 40
+      subTopicId : subTopicId,
+      blockType : 'heading',
+      position : 3
+    );
+
+    await BlocksHelper.appendHeadingBlock(
+      db,
+      blockId : headingLessonId_2,
+      heading : 'Simplification Of Surds'
+    );
+
+    final paragraphLessonId_2 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'paragraph',
+      position : 4
+    );
+
+    final paragraphId_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendParagraphLink(
+      db,
+      blockId : paragraphLessonId_2,
+      paragraphId : paragraphId_2
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
-      text : 'consider:\n',
+      paragraphId : paragraphId_2,
+      text : '  Simplification of surds is the process of expressing a surd in its simplest form by moving any perfect-square factors form inside the square root. i.e Making a surd simpler without changing its value.\n\n',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_2,
+      text : 'For example:\n',
       isMath : false,
       isImage : false,
       style : {
         'color' : 'amber',
         'fontSize' : 16,
       },
-      position : 41
+      position : 2
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'\sqrt{8}',
       isMath : true,
       isImage : false,
-      position : 42
+      position : 3
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : ' at first, it looks like a surd, but ',
       isMath : false,
       isImage : false,
-      position : 43
+      position : 4
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'8',
       isMath : true,
       isImage : false,
-      position : 44
+      position : 5
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : ' can be separated into:\n',
       isMath : false,
       isImage : false,
-      position : 45
+      position : 6
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'''8 = 4 \times 2
       
       \therefore \sqrt{8} = \sqrt{4 \times 2}''',
       isMath : true,
       isImage : false,
-      position : 46
+      position : 7
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : '\n\nusing the product rule of surds\n',
       isMath : false,
       isImage : false,
-      position : 47
+      position : 8
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'\sqrt{ab} = \sqrt{a} \times \sqrt{b}',
       isMath : true,
       isImage : false,
-      position : 48
+      position : 9
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : '\nwe get:\n',
       isMath : false,
       isImage : false,
-      position : 49
+      position : 10
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'\sqrt{8} = \sqrt{4} \times \sqrt{2}',
       isMath : true,
       isImage : false,
-      position : 50
+      position : 11
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : '\nsince\n',
       isMath : false,
       isImage : false,
-      position : 51
+      position : 12
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId: paragraphId,
+      paragraphId: paragraphId_2,
       text : r'\sqrt{4} = 2',
       isMath : true,
       isImage : false,
-      position : 52
+      position : 13
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : '\nwe have:\n',
       isMath : false,
       isImage : false,
-      position : 53
+      position : 14
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'\sqrt{8} = 2\sqrt{2}',
       isMath : true,
       isImage : false,
-      position : 54
+      position : 15
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : '\nso ',
       isMath : false,
       isImage : false,
-      position : 55
+      position : 16
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'\sqrt{8}',
       isMath : true,
       isImage : false,
-      position : 56
+      position : 17
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : ' is a surd, but it can be simplified to ',
       isMath : false,
       isImage : false,
-      position : 57
+      position : 18
     );
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : paragraphId,
+      paragraphId : paragraphId_2,
       text : r'2\sqrt{2}.',
       isMath : true,
       isImage : false,
-      position : 58
+      position : 19
     );
 
     final messageLessonId_1 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'tip',
-      position : 3
+      position : 6
     );
 
     final messageParagraphIdContext_1 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -639,7 +671,7 @@ class IntroductionOfSurdsSeed {
       db,
       subTopicId : subTopicId,
       blockType : 'example',
-      position : 4
+      position : 7
     );
 
     final exampleParagraphIdQuestion_1 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -699,7 +731,7 @@ class IntroductionOfSurdsSeed {
       db,
       subTopicId : subTopicId,
       blockType : 'example',
-      position : 5
+      position : 8
     );
 
     final exampleParagraphIdQuestion_2 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -763,7 +795,7 @@ class IntroductionOfSurdsSeed {
       db,
       subTopicId : subTopicId,
       blockType : 'example',
-      position : 6
+      position : 9
     );
 
     final exampleParagraphIdQuestion_3 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -834,7 +866,7 @@ class IntroductionOfSurdsSeed {
       db,
       subTopicId : subTopicId,
       blockType : 'summary',
-      position:7
+      position: 10
     );
 
     final messageParagraphIdContext_2 = await ParagraphHelper.appendParagraphBlocks(db);
