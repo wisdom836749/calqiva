@@ -23,7 +23,13 @@ class MessageBlock {
   factory MessageBlock.fromMap(Map<String, dynamic> map) {
     return MessageBlock(
       blockId : map['block_id'] as int,
-      type : MessageType.values.firstWhere((value) => value.name == map['type']),
+      type : MessageType.values.firstWhere((value) {
+        return value.name == map['type'];
+        },
+        orElse : () {
+          throw FormatException('unknown lesson block type: ${map['type']}');
+        },
+      ),
       paragraphContext : map['paragraph_context'] as int,
     );
   }

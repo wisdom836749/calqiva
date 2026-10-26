@@ -40,7 +40,11 @@ class Lesson {
       subTopicId : map['sub_topic_id'] as int,
       blockType : LessonType.values.firstWhere((value) {
         return value.name == map['block_type'];
-      }),
+        },
+        orElse : () {
+          throw FormatException('unknown lesson block type: ${map['block_type']}');
+        },
+      ),
       position : map['position'] as int,
     );
   }

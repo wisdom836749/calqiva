@@ -69,7 +69,7 @@ class ParagraphRendererWidget extends StatelessWidget {
     final lines = part.text.split('\n');
 
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal : 8),
+      padding: EdgeInsets.symmetric(horizontal : 4),
       child : Column(
         crossAxisAlignment : CrossAxisAlignment.start,
         children : lines.map((line){
@@ -77,10 +77,7 @@ class ParagraphRendererWidget extends StatelessWidget {
             return const SizedBox(height : 12);
           }
 
-          return Padding(
-            padding : EdgeInsets.symmetric(horizontal : 8),
-
-            child : SingleChildScrollView(
+          return SingleChildScrollView(
               scrollDirection : Axis.horizontal,
 
               child : Math.tex(
@@ -89,7 +86,6 @@ class ParagraphRendererWidget extends StatelessWidget {
                   fontSize : (part.style['fontSize'] as num).toDouble(),
                   color : _getColor(part.style['color']),
                 ),
-              ),
             ),
           );
         }).toList(),
@@ -104,7 +100,7 @@ class ParagraphRendererWidget extends StatelessWidget {
       case 'red':
         return Colors.red;
       case 'amber':
-        return Colors.amber;
+        return Colors.amber.shade800;
       case 'black':
         return Colors.black;
       default :

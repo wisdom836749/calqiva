@@ -33,9 +33,9 @@ class LessonContextScreen extends StatelessWidget {
         children : [
           Positioned.fill(
             child : Opacity(
-              opacity: 0.3,
+              opacity: 0.2 ,
               child : Image.asset(
-                'calqiva_watermark.png',
+                'assets/images/calqiva_watermark.png',
                 fit : BoxFit.cover,
               ),
             ),
@@ -119,7 +119,8 @@ class LessonContextScreen extends StatelessWidget {
             example.title,
             style : TextStyle(
               color : Colors.brown,
-              fontWeight : FontWeight.w500,
+              fontWeight : FontWeight.w600,
+              fontSize : 16,
             ),
           ),
           
@@ -130,6 +131,7 @@ class LessonContextScreen extends StatelessWidget {
               "Question",
               style : TextStyle(
                 color : Colors.indigo,
+                fontSize : 16,
               ),
             ),
 
@@ -145,6 +147,7 @@ class LessonContextScreen extends StatelessWidget {
               "Solution",
               style : TextStyle(
                 color : Colors.indigo,
+                fontSize : 16,
               ),
             ),
 
@@ -160,6 +163,7 @@ class LessonContextScreen extends StatelessWidget {
               "Answer",
               style : TextStyle(
                 color : Colors.indigo,
+                fontSize :16,
               ),
             ),
 
@@ -189,40 +193,48 @@ class LessonContextScreen extends StatelessWidget {
 
     String title = isSummary ? "Summary" : isTip ? "Tip" : isWarning ? "Warning" : "Note";
 
-    return Card(
-      elevation : 8,
+    return Padding(
+      padding : EdgeInsets.only(bottom : 12),
+      
+      child : Card(
+        elevation : 8,
 
-      color : color.withValues(alpha : 0.4),
+        color : color.withValues(alpha : 0.4),
 
-      child : Column(
-        crossAxisAlignment : CrossAxisAlignment.start,
-        children : [
-          Row(
-            mainAxisAlignment : MainAxisAlignment.start,
+        child : Padding(
+          padding : EdgeInsets.all(15),
+          child : Column(
+            crossAxisAlignment : CrossAxisAlignment.start,
             children : [
-              Icon(
-                icon,
-                size : 50,
+              Row(
+                mainAxisAlignment : MainAxisAlignment.start,
+                children : [
+                  Icon(
+                    icon,
+                    size : 20,
+                  ),
+
+                  Text(
+                    title,
+                    style : TextStyle(
+                      color : color,
+                      fontWeight : FontWeight.w500,
+                      fontSize : 16
+                    ),
+                  ),
+                ],
               ),
 
-              Text(
-                title,
-                style : TextStyle(
-                  color : color,
-                  fontWeight : FontWeight.w500,
+              if (message.context != null) ...[
+                const SizedBox(height : 10),
+
+                ParagraphRendererWidget(
+                  paragraph : message.context!
                 ),
-              ),
+              ],
             ],
           ),
-
-          if (message.context != null) ...[
-            const SizedBox(height : 10),
-
-            ParagraphRendererWidget(
-              paragraph : message.context!
-            ),
-          ],
-        ],
+        ),
       ),
     );
   }

@@ -46,7 +46,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' A surds is a mathematical expression that contain a root, such as a square root, cute root, or another types of root, which cannot be simplified to give a rational number (i.e fractional number).\n',
+      text : '  A surds is a mathematical expression that contain a root, such as a square root, cute root, or another types of root, which cannot be simplified to give a rational number (i.e fractional number).\n',
       isMath : false,
       isImage : false,
       position : 1
@@ -64,7 +64,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' Surds are useful because they allow us to write exact mathematic values.',
+      text : '  Surds are useful because they allow us to write exact mathematic values.',
       isMath : false,
       isImage : false,
       position : 3
@@ -118,7 +118,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' The value ',
+      text : ' The value',
       isMath : false,
       isImage : false,
       position : 9
@@ -145,7 +145,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' To recognize surds easily, you should know some perfect squares.',
+      text : ' To recognize surds easily, you should know some perfect squares.\n',
       isMath : false,
       isImage : false,
       style : {
@@ -324,7 +324,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : 'are not perfect squares. Therefore, their square roots generally give irrational numbers. For example:\n',
+      text : 'are not perfect squares. Therefore, their square roots generally give irrational numbers. For example: ',
       isMath : false,
       isImage : false,
       position : 31
@@ -342,7 +342,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' cannot be simplifield to a whole number.\n',
+      text : ' cannot be simplifield to a whole number.\n\n',
       isMath : false,
       isImage : false,
       position : 33
@@ -400,7 +400,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' are surds.\n',
+      text : ' are surds.\n\n',
       isMath : false,
       isImage : false,
       position : 39
@@ -409,7 +409,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : ' Another important point is that a surd does not always have to remain exactly as it first appears, i.e a surd can sometimes be simplifield into a simpler form without changing its exact value,\n',
+      text : '  Another important point is that a surd does not always have to remain exactly as it first appears, i.e a surd can sometimes be simplifield into a simpler form without changing its exact value.\n\n',
       isMath : false,
       isImage : false,
       position : 40
@@ -418,7 +418,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : 'consider:',
+      text : 'consider:\n',
       isMath : false,
       isImage : false,
       style : {
@@ -478,7 +478,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId,
-      text : '\nusing the product rule of surds\n',
+      text : '\n\nusing the product rule of surds\n',
       isMath : false,
       isImage : false,
       position : 47
@@ -744,9 +744,9 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdAnswer_2,
-      text : r'2\sqrt',
-      isImage : true,
-      isMath : false,
+      text : r'2\sqrt{3}',
+      isImage : false,
+      isMath : true,
       position : 1
     );
 

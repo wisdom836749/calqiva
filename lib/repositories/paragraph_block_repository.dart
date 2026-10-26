@@ -19,12 +19,12 @@ class ParagraphBlockRepository {
       return null;
     }
 
-    final blockId = block.first;
+    final blockId = block.first['id'] as int;
 
     final parts =await TextPartRepository.getByParagraphId(id);
 
     return ParagraphBlock(
-      id : blockId as int,
+      id : blockId,
       parts : parts
     );
   }

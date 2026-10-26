@@ -9,6 +9,8 @@ import '../models/example_block.dart';
 import 'example_block_repository.dart';
 import '../models/message_block.dart';
 import 'message_block_repository.dart';
+import '../models/paragraph_block_link.dart';
+import 'paragraph_block_link_repository.dart';
 
 
 class LessonRepository {
@@ -46,8 +48,16 @@ class LessonRepository {
       return null;
     }
 
+    final link = await ParagraphBlockLinkRepository.getByBlockId(
+      block.id
+    );
+
+    if (link == null) {
+      return null;
+    }
+
     return ParagraphBlockRepository.getById(
-      block.id,
+      link.paragraphId,
     );
   }
 
