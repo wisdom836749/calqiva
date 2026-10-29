@@ -821,7 +821,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_3,
-      text : ' as the square root of a single number',
+      text : ' as the square root of a single number.',
       isMath : false,
       isImage : false,
       position : 3
