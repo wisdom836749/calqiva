@@ -684,7 +684,20 @@ class OperationsOfSurds {
       heading : 'Subtraction Of Surds'
     );
 
+    final paragraphLessonId_3 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'paragraph',
+      position : 9
+    );
+
     final paragraphId_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendParagraphLink(
+      db,
+      blockId : paragraphLessonId_3,
+      paragraphId : paragraphId_3
+    );
 
     await ParagraphHelper.appendTextPart(
       db,
@@ -738,7 +751,8 @@ class OperationsOfSurds {
     final exampleLessonId_3 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
-      position : 9
+      blockType : 'example',
+      position : 10
     );
 
     final exampleParagraphIdQuestion_3 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -752,6 +766,305 @@ class OperationsOfSurds {
       position : 1
     );
 
-    await ParagraphHelper.appendTextPart()
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_3,
+      text : r'12\sqrt{3} - 7\sqrt{3}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_3,
+      text : r'''12\sqrt{3} - 7\sqrt{3}
+      
+      = (12 - 7)\sqrt{3}
+      
+      = 5\sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_3,
+      text : r'5\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_3,
+      title : 'Example 1',
+      paragraphQuestion : exampleParagraphIdQuestion_3,
+      paragraphSolution : exampleParagraphIdSolution_3,
+      paragraphAnswer : exampleParagraphIdAnswer_3,
+    );
+
+    final exampleLessonId_4 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 11
+    );
+
+    final exampleParagraphIdQuestion_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_4,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_4,
+      text : r'2\sqrt{27} + \sqrt{75} - 5\sqrt{12}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_4,
+      text : r'''2\sqrt{27} + \sqrt{75} - 5\sqrt{12}
+      
+      27 = 9 \times 3
+      \therefore 2\sqrt{27} = 2\sqrt{9 \times 3}
+      = 2 \times 3\sqrt{3}
+      = 6\sqrt{3}
+      
+      75 = 25 \times 3
+      \therfore \sqrt{75} = \sqrt{25 \times 3}
+      = 5\sqrt{3}
+      
+      12 = 4 \times 3
+      \therefore -5\sqrt{12} = -5\sqrt{4 \times 3}
+      = -5 \times 2\sqrt{3}
+      = -10\sqrt{3}
+      
+      \therefore 6\sqrt{3} + 5\sqrt{3} - 10\sqrt{3}
+      
+      = (6 + 5 - 10)\sqrt{3}
+      
+      = 1\sqrt{3} or \sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_4,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_4,
+      title : 'Example 2',
+      paragraphQuestion : exampleParagraphIdQuestion_4,
+      paragraphSolution : exampleParagraphIdSolution_4,
+      paragraphAnswer : exampleParagraphIdAnswer_4
+    );
+
+    final headingLessonId_3 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'heading',
+      position : 12
+    );
+
+    await BlocksHelper.appendHeadingBlock(
+      db,
+      blockId : headingLessonId_3,
+      heading : 'Multiplication Of Surds',
+    );
+
+    final paragraphLessonId_4 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'paragraph',
+      position : 13
+    );
+
+    final paragraphId_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendParagraphLink(
+      db,
+      blockId : paragraphLessonId_4,
+      paragraphId : paragraphId_4
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : '  Multiplify of surds means nultiplying  two or more expressions that contain roots such as square roots.\n\n',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : 'For example:\n',
+      isMath : false,
+      isImage : false,
+      style : {
+        'color' : 'amber',
+        'fontSize' : 16
+      },
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : r'\sqrt{2} \times \sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 3
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : '\n\n  To multipy,surds, we use the role;\n',
+      isMath : false,
+      isImage : false,
+      position : 4
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : r'\sqrt{a} \times \sqrt{b} = \sqrt{ab}',
+      isMath : true,
+      isImage : false,
+      position : 5
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_4,
+      text : '  This means that when nultiplying two square roots, we multiply the numbers inside the square roots.',
+      isMath : false,
+      isImage : true,
+      position : 6
+    );
+
+    final messageLessonId_3 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'tip',
+      position : 14
+    );
+
+    final messageParagraphIdContext_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphIdContext_3,
+      text : '  After nultiplying surds, always check whether the answer can be simplified.',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendMessageBlock(
+      db,
+      blockId : messageLessonId_3,
+      type : 'tip',
+      paragraphContext : messageParagraphIdContext_3
+    );
+
+    final exampleLessonId_5 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 15
+    );
+
+    final  exampleParagraphIdQuestion_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_5,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_5,
+      text : r'\sqrt{5} \times \sqrt{10}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_5,
+      text : r'''\sqrt{5} \times \sqrt{10}
+      
+      = \sqrt{5 \times 10}
+      
+      = \sqrt{50}
+      
+      = \sqrt{25 \times 2},
+      
+      = \sqrt{25} \times \sqrt{2}
+      
+      = 5\sqrt{2}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_5,
+      text : r'5\sqrt{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_5,
+      title : 'Example 1',
+      paragraphQuestion : exampleParagraphIdQuestion_5,
+      paragraphSolution : exampleParagraphIdSolution_5,
+      paragraphAnswer : exampleParagraphIdAnswer_5
+    );
   }
 }

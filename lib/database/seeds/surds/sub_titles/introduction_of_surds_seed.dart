@@ -699,9 +699,11 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdSolution_1,
-      text : r'''\sqrt{y^{2}x} = \sqrt{y} \times \sqrt{x}
+      text : r'''\sqrt{y^{2}x}
+
+      = \sqrt{y^{2}} \times \sqrt{x}
       
-      = y\sqrt{x^{2}}''',
+      = y\sqrt{x}''',
       isMath : true,
       isImage : false,
       position : 1
