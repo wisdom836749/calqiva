@@ -50,7 +50,7 @@ class ParagraphRendererWidget extends StatelessWidget {
             text : part.text,
             style : TextStyle(
               fontSize : (part.style['fontSize'] as num).toDouble(),
-              fontWeight : _getFontWeight(part.style['fotWeight']),
+              fontWeight : _getFontWeight(part.style['fontWeight']),
               color : _getColor(part.style['color']),
             ),
           ),
