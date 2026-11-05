@@ -1643,7 +1643,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_11,
-      text : r'\frac{6\sqrt{10}}{2\sqrt{2}}',
+      text : r'\frac{6\sqrt{10}}{2\sqrt{2}}.',
       isMath : true,
       isImage : false,
       position : 2
@@ -1685,5 +1685,411 @@ class OperationsOfSurds {
       paragraphSolution : exampleParagraphIdSolution_11,
       paragraphAnswer : exampleParagraphIdAnswer_11
     );
+
+    final exampleLessonId_12 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 25
+    );
+
+    final exampleParagraphIdQuestion_12 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_12,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_12,
+      text : r'\frac{sqrt{12}}{2}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_12 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_12,
+      text : r'''\frac{\sqrt{12}}{2}
+      
+      \sqrt{12} = \sqrt{4} \times \sqrt{3}
+      
+      = 2\sqrt{3}
+      
+      \therefore \frac{2\sqrt{3}}{2}
+      
+      = \sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_12 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_12,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_12,
+      title : 'Example 3',
+      paragraphQuestion : exampleParagraphIdQuestion_12,
+      paragraphSolution : exampleParagraphIdSolution_12,
+      paragraphAnswer : exampleParagraphIdAnswer_12
+    );
+
+    final exampleLessonId_13 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 26
+    );
+
+    final exampleParagraphIdQuestion_13 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_13,
+      text : 'Rationalise the denominator of ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_13,
+      text : r'\frac{6}{\sqrt{3}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_13 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_13,
+      text : r'''\frac{6}{\sqrt{3}}
+      
+      = \frac{6}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}}
+      
+      = \frac{6 \times \sqrt{3}}{\sqrt{3} \times \sqrt{3}}
+      
+      = \frac{6\sqrt{3}}{3}
+      
+      = 2\sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_13 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_13,
+      text : r'2\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_13,
+      title : 'Example 4',
+      paragraphQuestion : exampleParagraphIdQuestion_13,
+      paragraphSolution : exampleParagraphIdSolution_13,
+      paragraphAnswer : exampleParagraphIdAnswer_13
+    );
+
+    final messageLessonId_5 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'note',
+      position : 27
+    );
+
+    final messageParagraphIdContext_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : messageParagraphIdContext_5,
+      text : '  To rationalise a fractikon whose denominator is a surd, multiply the numerator and denominator by a surd that make the denominator rational.',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendMessageBlock(
+      db,
+      blockId : messageLessonId_5,
+      type : 'note',
+      paragraphContext : messageParagraphIdContext_5
+    );
+
+    final quizParagraphIdQuestion_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_1,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_1,
+      text : r'2\sqrt{135} - 2\sqrt{60} + \sqrt{15} - \sqrt{240}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_1,
+      text : r'-2\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_1,
+      text : r'-\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_1,
+      text : r'2\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_1,
+      text : r'\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_1,
+      text : r'''2\sqrt{135} - 2\sqrt{60} + \sqrt{15} - \sqrt{250}
+      
+      = 2\sqrt{9 \times 15} - 2\sqrt{4 \times 15} + \sqrt{15} - \sqrt{16 \times 15}
+      
+      = 2 \times 3\sqrt{15} - 2 \times 2\sqrt{15} + \sqrt{15} - 4\sqrt{15}
+      
+      = 6\sqrt{15} - 4\sqrt{15} + \sqrt{15} - 4\sqrt{15}
+      
+      = (6 - 4 + 1 - 4)\sqrt{15}
+      
+      = -\sqrt{15}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_1 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_1,
+      text : r'-\sqrt{15}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_1,
+      option0 : quizParagraphIdOption0_1,
+      option1 : quizParagraphIdOption1_1,
+      option2 : quizParagraphIdOption2_1,
+      option3 : quizParagraphIdOption3_1,
+      solution : quizParagraphIdSolution_1,
+      correctAnswer : quizParagraphIdCorrectAnswer_1
+    );
+
+    final quizParagraphIdQuestion_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_2,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_2,
+      text : r'\sqrt{6} \times \sqrt{8} \times \sqrt{10} \times \sqrt{12}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_2,
+      text : r'12\sqrt{20}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_2,
+      text : r'24\sqrt{20}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_2,
+      text : r'24\sqrt{10}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_2,
+      text : r'24\sqrt{5}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_2,
+      text : r'''\sqrt{6} \times \sqrt{8} \times \sqrt{10} \times \sqrt{12}
+      
+      = \sqrt{6 \times 8 \times 10 \times 12}
+      
+      = \sqrt{5760}
+      
+      = \sqrt{576 \times 10}
+      
+      = \sqrt{576} \times \sqrt{10}
+      
+      = 24\sqrt{10}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_2 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_2,
+      text : r'24\sqrt{10}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_2,
+      option0 : quizParagraphIdOption0_2,
+      option1 : quizParagraphIdOption1_2,
+      option2 : quizParagraphIdOption2_2,
+      option3 : quizParagraphIdOption3_2,
+      solution : quizParagraphIdSolution_2,
+      correctAnswer : quizParagraphIdCorrectAnswer_2
+    );
+
+    final quizParagraphIdQuestion_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_3,
+      text : 'Rationalise the denominator: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_3,
+      text : r'\frac{5}{\sqrt{3}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_3,
+      text : r'5\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_3 = 
   }
 }

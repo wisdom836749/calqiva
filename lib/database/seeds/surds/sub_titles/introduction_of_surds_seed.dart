@@ -921,7 +921,7 @@ class IntroductionOfSurdsSeed {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : quizParagraphIdQuestion_1,
-      text : r'\sqrt{56},',
+      text : r'\sqrt{56}.',
       isMath : true,
       isImage : false,
       position : 2
