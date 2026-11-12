@@ -4,7 +4,7 @@ import '../../../insert_helpers/paragraph_helper.dart';
 import '../../../insert_helpers/quiz_helper.dart';
 import '../../../insert_helpers/sub_topic_helper.dart';
 
-class OperationsOfSurds {
+class OperationsOfSurdsSeed {
   static Future<void> seed(
     Database db, {
       required int topicId
@@ -46,7 +46,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_1,
-      text : '  Addition of surds means adding two or more surd expression s together. For example;\n',
+      text : '  Addition of surds means adding two or more surd expressions together. For example;\n',
       isMath : false,
       isImage : false,
       position : 1
@@ -87,7 +87,7 @@ class OperationsOfSurds {
       isImage : false,
       style : {
         'color' : 'blue',
-        'fontSide' : 16
+        'fontSize' : 16
       },
       position : 5
     );
@@ -104,7 +104,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_1,
-      text : '  Like surds are surds that have the numbet under the square_root sign.\n\n',
+      text : '  Like surds are surds that have the number under the square-root sign.\n\n',
       isMath : false,
       isImage : false,
       position : 7
@@ -153,7 +153,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_1,
-      text : ' are like surds',
+      text : ' are like surds\n\n',
       isMath : false,
       isImage : false,
       position : 11
@@ -403,7 +403,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_2,
-      text : '\n\n  notice that we add ',
+      text : '\n\n  Notice that we add ',
       isMath : false,
       isImage : false,
       position : 18
@@ -844,25 +844,15 @@ class OperationsOfSurds {
       paragraphId : exampleParagraphIdSolution_4,
       text : r'''2\sqrt{27} + \sqrt{75} - 5\sqrt{12}
       
-      27 = 9 \times 3
-      \therefore 2\sqrt{27} = 2\sqrt{9 \times 3}
-      = 2 \times 3\sqrt{3}
-      = 6\sqrt{3}
-      
-      75 = 25 \times 3
-      \therfore \sqrt{75} = \sqrt{25 \times 3}
-      = 5\sqrt{3}
-      
-      12 = 4 \times 3
-      \therefore -5\sqrt{12} = -5\sqrt{4 \times 3}
-      = -5 \times 2\sqrt{3}
-      = -10\sqrt{3}
-      
-      \therefore 6\sqrt{3} + 5\sqrt{3} - 10\sqrt{3}
+      = 2\sqrt{9 \times 3} + \sqrt{25 \times 3} - 5\sqrt{4 \times 3}
+
+      = 2 \times 3\sqrt{3} + 5\sqrt{3} - 5 \times 2\sqrt{3}
+
+      = 6\sqrt{3} + 5\sqrt{3} - 10\sqrt{3}
       
       = (6 + 5 - 10)\sqrt{3}
       
-      = 1\sqrt{3} or \sqrt{3}''',
+      = \sqrt{3}''',
       isMath : true,
       isImage : false,
       position : 1
@@ -919,7 +909,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_4,
-      text : '  Multiplify of surds means nultiplying  two or more expressions that contain roots such as square roots.\n\n',
+      text : '  Multiplify of surds means multiplying  two or more expressions that contain roots such as square roots.\n\n',
       isMath : false,
       isImage : false,
       position : 1
@@ -968,9 +958,9 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_4,
-      text : '  This means that when nultiplying two square roots, we multiply the numbers inside the square roots.',
+      text : '  \nThis means that when multiplying two square roots, we multiply the numbers inside the square roots.',
       isMath : false,
-      isImage : true,
+      isImage : false,
       position : 6
     );
 
@@ -986,7 +976,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : messageParagraphIdContext_3,
-      text : '  After nultiplying surds, always check whether the answer can be simplified.',
+      text : '  After multiplying surds, always check whether the answer can be simplified.',
       isMath : false,
       isImage : false,
       position : 1
@@ -1135,6 +1125,7 @@ class OperationsOfSurds {
       paragraphAnswer : exampleParagraphIdAnswer_6
     );
 
+
     final exampleLessonId_7 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
@@ -1156,7 +1147,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_7,
-      text : r'2\sqrt{3}(\sqrt{3} + 4)',
+      text : r'\sqrt{2} \times \sqrt{3} \times \sqrt{5} \times \sqrt{12} \times \sqrt{45} \times \sqrt{50}',
       isMath : true,
       isImage : false,
       position : 2
@@ -1167,144 +1158,6 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdSolution_7,
-      text : r'''2\sqrt{3}(\sqrt{3} + 4)
-      
-      = 2\sqrt{3} \times \sqrt{3}
-      
-      = 2 \times 3 = 6
-      
-      2\sqrt{3} \times 4
-      
-      = 8\sqrt{3}
-      
-      = 6 + 8\sqrt{3}''',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    final exampleParagraphIdAnswer_7 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdAnswer_7,
-      text : r'6 + 8\sqrt{3}',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    await BlocksHelper.appendExampleBlock(
-      db,
-      blockId : exampleLessonId_7,
-      title : 'Example 3',
-      paragraphQuestion : exampleParagraphIdQuestion_7,
-      paragraphSolution : exampleParagraphIdSolution_7,
-      paragraphAnswer : exampleParagraphIdAnswer_7
-    );
-
-    final exampleLessonId_8 = await BlocksHelper.appendLesson(
-      db,
-      subTopicId : subTopicId,
-      blockType : 'example',
-      position : 18
-    );
-
-    final exampleParagraphIdQuestion_8 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_8,
-      text : 'Simplify: ',
-      isMath : false,
-      isImage : false,
-      position : 1
-    );
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_8,
-      text : r'(\sqrt{2} + 3)(\sqrt{2} + 1)',
-      isMath : true,
-      isImage : false,
-      position : 2
-    );
-
-    final exampleParagraphIdSolution_8 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdSolution_8,
-      text : r'''(\sqt{2} + 3)(\sqrt{2} + 1)
-      
-      = \sqrt{2} \times \sqrt{2} = 2
-      
-      = \sqrt{2} \times 1 = \sqrt{2}
-      
-      = 3 \times \sqrt{2} = 3\sqrt{2}
-      
-      = 3 \times 1 = 3
-      
-      = 2 + \sqrt{2} + 3\sqrt{2} + 3
-      
-      = 5 + 4\sqrt{2}''',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    final exampleParagraphIdAnswer_8 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdAnswer_8,
-      text : r'5 + 4\sqrt{2}',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    await BlocksHelper.appendExampleBlock(
-      db,
-      blockId : exampleLessonId_8,
-      title : 'Example 4',
-      paragraphQuestion : exampleParagraphIdQuestion_8,
-      paragraphSolution : exampleParagraphIdSolution_8,
-      paragraphAnswer : exampleParagraphIdAnswer_8
-    );
-
-    final exampleLessonId_9 = await BlocksHelper.appendLesson(
-      db,
-      subTopicId : subTopicId,
-      blockType : 'example',
-      position : 19
-    );
-
-    final exampleParagraphIdQuestion_9 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_9,
-      text : 'Simplify: ',
-      isMath : false,
-      isImage : false,
-      position : 1
-    );
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_9,
-      text : r'\sqrt{2} \times \sqrt{3} \times \sqrt{5} \times \sqrt{12} \times \sqrt{45} \times \sqrt{50}',
-      isMath : true,
-      isImage : false,
-      position : 2
-    );
-
-    final exampleParagraphIdSolution_9 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdSolution_9,
       text : r'''\sqrt{2} \times \sqrt{3} \times \sqrt{5} \times \sqrt{12} \times \sqrt{45} \times \sqrt{50}
       
       = \sqrt{2 \times 3 \times 5 \times 12 \times 45 \times 50}
@@ -1321,11 +1174,11 @@ class OperationsOfSurds {
       position : 1
     );
 
-    final exampleParagraphIdAnswer_9 = await ParagraphHelper.appendParagraphBlocks(db);
+    final exampleParagraphIdAnswer_7 = await ParagraphHelper.appendParagraphBlocks(db);
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : exampleParagraphIdAnswer_9,
+      paragraphId : exampleParagraphIdAnswer_7,
       text : r'900',
       isMath : true,
       isImage : false,
@@ -1334,18 +1187,18 @@ class OperationsOfSurds {
 
     await BlocksHelper.appendExampleBlock(
       db,
-      blockId : exampleLessonId_9,
-      title : 'Example 5',
-      paragraphQuestion : exampleParagraphIdQuestion_9,
-      paragraphSolution : exampleParagraphIdSolution_9,
-      paragraphAnswer : exampleParagraphIdAnswer_9
+      blockId : exampleLessonId_7,
+      title : 'Example 3',
+      paragraphQuestion : exampleParagraphIdQuestion_7,
+      paragraphSolution : exampleParagraphIdSolution_7,
+      paragraphAnswer : exampleParagraphIdAnswer_7
     );
 
     final messageLessonId_4 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'tip',
-      position :20
+      position :18
     );
 
     final messageParagraphIdContext_4 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -1370,7 +1223,7 @@ class OperationsOfSurds {
       db,
       subTopicId : subTopicId,
       blockType : 'heading',
-      position : 21
+      position : 19
     );
 
     await BlocksHelper.appendHeadingBlock(
@@ -1383,7 +1236,7 @@ class OperationsOfSurds {
       db,
       subTopicId : subTopicId,
       blockType : 'paragraph',
-      position : 22
+      position : 20
     );
 
     final paragraphId_5 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -1478,7 +1331,7 @@ class OperationsOfSurds {
       isImage : false,
       style : {
         'fontWeight' : 'w500',
-        'fontSide' : 16
+        'fontSize' : 16
       },
       position : 9
     );
@@ -1509,7 +1362,7 @@ class OperationsOfSurds {
       db,
       paragraphId : paragraphId_5,
       text : r'\frac{\sqrt{a}}{\sqrt{b}} = \sqrt{\frac{a}{b}}',
-      isMath : false,
+      isMath : true,
       isImage : false,
       position : 12
     );
@@ -1552,10 +1405,138 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : paragraphId_5,
-      text : r'\frac{a\sqrt{x}}{b\sqrt{y}} = \frac{a}{b} \times \sqrt{\frac(x){y}}',
+      text : r'\frac{a\sqrt{x}}{b\sqrt{y}} = \frac{a}{b} \times \sqrt{\frac{x}{y}}',
       isMath : true,
       isImage : false,
       position : 16
+    );
+
+    final exampleLessonId_8 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 21
+    );
+
+    final exampleParagraphIdQuestion_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_8,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_8,
+      text : r'\frac{\sqrt{12}}{\sqrt{3}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_8,
+      text : r'''\frac{\sqrt{12}}{\sqrt{3}}
+      
+      = \sqrt{\frac{12}{3}}
+      
+      = \sqrt{4}
+      
+      = 2''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_8,
+      text : r'2',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_8,
+      title : 'Example 1',
+      paragraphQuestion : exampleParagraphIdQuestion_8,
+      paragraphSolution : exampleParagraphIdSolution_8,
+      paragraphAnswer : exampleParagraphIdAnswer_8
+    );
+
+    final exampleLessonId_9 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 22
+    );
+
+    final exampleParagraphIdQuestion_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_9,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_9,
+      text : r'\frac{6\sqrt{10}}{2\sqrt{2}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_9,
+      text : r'''\frac{6\sqrt{10}}{2\sqrt{2}}
+      
+      = \frac{6}{2} \times \frac{\sqrt{10}}{\sqrt{2}}
+      
+      = 3 \times \sqrt{5}
+      
+      = 3\sqrt{5}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_9,
+      text : r'3\sqrt{5}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_9,
+      title : 'Example 2',
+      paragraphQuestion : exampleParagraphIdQuestion_9,
+      paragraphSolution : exampleParagraphIdSolution_9,
+      paragraphAnswer : exampleParagraphIdAnswer_9
     );
 
     final exampleLessonId_10 = await BlocksHelper.appendLesson(
@@ -1579,7 +1560,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_10,
-      text : r'\frac{\sqrt{12}}{\sqrt{3}}.',
+      text : r'\frac{\sqrt{12}}{2}.',
       isMath : true,
       isImage : false,
       position : 2
@@ -1590,13 +1571,15 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdSolution_10,
-      text : r'''\frac{\sqrt{12}}{\sqrt{3}}
+      text : r'''\frac{\sqrt{12}}{2}
       
-      = \sqrt{\frac{12}{3}}
+      \sqrt{12} = \sqrt{4} \times \sqrt{3}
       
-      = \sqrt{4}
+      = 2\sqrt{3}
       
-      = 2''',
+      \therefore \frac{2\sqrt{3}}{2}
+      
+      = \sqrt{3}''',
       isMath : true,
       isImage : false,
       position : 1
@@ -1607,7 +1590,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdAnswer_10,
-      text : r'2',
+      text : r'\sqrt{3}',
       isMath : true,
       isImage : false,
       position : 1
@@ -1616,7 +1599,7 @@ class OperationsOfSurds {
     await BlocksHelper.appendExampleBlock(
       db,
       blockId : exampleLessonId_10,
-      title : 'Example 1',
+      title : 'Example 3',
       paragraphQuestion : exampleParagraphIdQuestion_10,
       paragraphSolution : exampleParagraphIdSolution_10,
       paragraphAnswer : exampleParagraphIdAnswer_10
@@ -1634,7 +1617,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_11,
-      text : 'Simplify: ',
+      text : 'Rationalise the denominator of ',
       isMath : false,
       isImage : false,
       position : 1
@@ -1643,7 +1626,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdQuestion_11,
-      text : r'\frac{6\sqrt{10}}{2\sqrt{2}}.',
+      text : r'\frac{6}{\sqrt{3}}.',
       isMath : true,
       isImage : false,
       position : 2
@@ -1654,136 +1637,6 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : exampleParagraphIdSolution_11,
-      text : r'''\frac{6\sqrt{10}}{2\sqrt{2}}
-      
-      = \frac{6}{2} \times \frac{\sqrt{10}}{\sqrt{2}}
-      
-      = 3 \times \sqrt{5}
-      
-      = 3\sqrt{5}''',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    final exampleParagraphIdAnswer_11 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdAnswer_11,
-      text : r'3\sqrt{5}',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    await BlocksHelper.appendExampleBlock(
-      db,
-      blockId : exampleLessonId_11,
-      title : 'Example 2',
-      paragraphQuestion : exampleParagraphIdQuestion_11,
-      paragraphSolution : exampleParagraphIdSolution_11,
-      paragraphAnswer : exampleParagraphIdAnswer_11
-    );
-
-    final exampleLessonId_12 = await BlocksHelper.appendLesson(
-      db,
-      subTopicId : subTopicId,
-      blockType : 'example',
-      position : 25
-    );
-
-    final exampleParagraphIdQuestion_12 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_12,
-      text : 'Simplify: ',
-      isMath : false,
-      isImage : false,
-      position : 1
-    );
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_12,
-      text : r'\frac{sqrt{12}}{2}.',
-      isMath : true,
-      isImage : false,
-      position : 2
-    );
-
-    final exampleParagraphIdSolution_12 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdSolution_12,
-      text : r'''\frac{\sqrt{12}}{2}
-      
-      \sqrt{12} = \sqrt{4} \times \sqrt{3}
-      
-      = 2\sqrt{3}
-      
-      \therefore \frac{2\sqrt{3}}{2}
-      
-      = \sqrt{3}''',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    final exampleParagraphIdAnswer_12 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdAnswer_12,
-      text : r'\sqrt{3}',
-      isMath : true,
-      isImage : false,
-      position : 1
-    );
-
-    await BlocksHelper.appendExampleBlock(
-      db,
-      blockId : exampleLessonId_12,
-      title : 'Example 3',
-      paragraphQuestion : exampleParagraphIdQuestion_12,
-      paragraphSolution : exampleParagraphIdSolution_12,
-      paragraphAnswer : exampleParagraphIdAnswer_12
-    );
-
-    final exampleLessonId_13 = await BlocksHelper.appendLesson(
-      db,
-      subTopicId : subTopicId,
-      blockType : 'example',
-      position : 26
-    );
-
-    final exampleParagraphIdQuestion_13 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_13,
-      text : 'Rationalise the denominator of ',
-      isMath : false,
-      isImage : false,
-      position : 1
-    );
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdQuestion_13,
-      text : r'\frac{6}{\sqrt{3}}.',
-      isMath : true,
-      isImage : false,
-      position : 2
-    );
-
-    final exampleParagraphIdSolution_13 = await ParagraphHelper.appendParagraphBlocks(db);
-
-    await ParagraphHelper.appendTextPart(
-      db,
-      paragraphId : exampleParagraphIdSolution_13,
       text : r'''\frac{6}{\sqrt{3}}
       
       = \frac{6}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}}
@@ -1798,11 +1651,11 @@ class OperationsOfSurds {
       position : 1
     );
 
-    final exampleParagraphIdAnswer_13 = await ParagraphHelper.appendParagraphBlocks(db);
+    final exampleParagraphIdAnswer_11 = await ParagraphHelper.appendParagraphBlocks(db);
 
     await ParagraphHelper.appendTextPart(
       db,
-      paragraphId : exampleParagraphIdAnswer_13,
+      paragraphId : exampleParagraphIdAnswer_11,
       text : r'2\sqrt{3}',
       isMath : true,
       isImage : false,
@@ -1811,18 +1664,18 @@ class OperationsOfSurds {
 
     await BlocksHelper.appendExampleBlock(
       db,
-      blockId : exampleLessonId_13,
+      blockId : exampleLessonId_11,
       title : 'Example 4',
-      paragraphQuestion : exampleParagraphIdQuestion_13,
-      paragraphSolution : exampleParagraphIdSolution_13,
-      paragraphAnswer : exampleParagraphIdAnswer_13
+      paragraphQuestion : exampleParagraphIdQuestion_11,
+      paragraphSolution : exampleParagraphIdSolution_11,
+      paragraphAnswer : exampleParagraphIdAnswer_11
     );
 
     final messageLessonId_5 = await BlocksHelper.appendLesson(
       db,
       subTopicId : subTopicId,
       blockType : 'note',
-      position : 27
+      position : 25
     );
 
     final messageParagraphIdContext_5 = await ParagraphHelper.appendParagraphBlocks(db);
@@ -1830,7 +1683,7 @@ class OperationsOfSurds {
     await ParagraphHelper.appendTextPart(
       db,
       paragraphId : messageParagraphIdContext_5,
-      text : '  To rationalise a fractikon whose denominator is a surd, multiply the numerator and denominator by a surd that make the denominator rational.',
+      text : '  To rationalise a fraction whose denominator is a surd, multiply the numerator and denominator by a surd that make the denominator rational.',
       isMath : false,
       isImage : false,
       position : 1
@@ -2335,6 +2188,592 @@ class OperationsOfSurds {
 
     final quizParagraphIdSolution_5 = await ParagraphHelper.appendParagraphBlocks(db);
 
-    await ParagraphHelper.appendTextPart()
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_5,
+      text : r'''2sqrt{27} + sqrt{75} - 5\sqrt{12}
+      
+      = 2\sqrt{9 \times 3} + \sqrt{25 \times 3} - 5\sqrt{4 \times 3}
+      
+      = 2 \times 3\sqrt{3} + 5\sqrt{3} - 5 \times 2\sqrt{3}
+      
+      = 6\sqrt{3} + 5\sqrt{3} - 10\sqrt{3}
+      
+      = (6 + 5 - 10)\sqrt{3}
+      
+      = \sqrt{3}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_5,
+      text : r'\sqrt{3}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_5,
+      option0 : quizParagraphIdOption0_5,
+      option1 : quizParagraphIdOption1_5,
+      option2 : quizParagraphIdOption2_5,
+      option3 : quizParagraphIdOption3_5,
+      solution : quizParagraphIdSolution_5,
+      correctAnswer : quizParagraphIdCorrectAnswer_5
+    );
+
+    final quizParagraphIdQuestion_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_6,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_6,
+      text : r'\frac{\sqrt{8} \times \sqrt{20} \times \sqrt{24}}{\sqrt{8} \times \sqrt{30}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_6,
+      text : r'36',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_6,
+      text : r'6',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_6,
+      text : r'-36',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_6,
+      text : r'-6',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_6,
+      text : r'''\frac{\sqrt{18} \times \sqrt{20} \times \sqrt{24}}{\sqrt{8} \times \sqrt{30}}
+      
+      = \sqrt{\frac{18 \times 20 \times 24}{8 \times 30}}
+      
+      = \sqrt{\frac{8640}{240}}
+      
+      = \sqrt{36}
+      
+      = 6''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_6 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_6,
+      text : r'6',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_6,
+      option0 : quizParagraphIdOption0_6,
+      option1 : quizParagraphIdOption1_6,
+      option2 : quizParagraphIdOption2_6,
+      option3 : quizParagraphIdOption3_6,
+      solution : quizParagraphIdSolution_6,
+      correctAnswer : quizParagraphIdCorrectAnswer_6
+    );
+
+    final quizParagraphIdQuestion_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_7,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_7,
+      text : r'\sqrt{3} + \frac{1}{\sqrt{3}} - \frac{1}{\sqrt{27}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_7,
+      text : r'\frac{\sqrt{11}}{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_7,
+      text : r'\frac{\sqrt{3}}{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_7,
+      text : r'\frac{11\sqrt{3}}{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_7,
+      text : r'\frac{3\sqrt{11}}{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_7,
+      text : r'''\sqrt{3} + \frac{1}{\sqrt{3}} - \frac{1}{\sqrt{27}}
+      
+      \frac{1}{\sqrt{3}} = \frac{1}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}} = \frac{\sqrt{3}}{3}
+      
+      \sqrt{27} = \sqrt{9 \times 3} = 3\sqrt{3}
+      
+      \therefore \frac{1}{\sqrt{27}} = \frac{1}{3\sqrt{3}} = \frac{1}{3\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}} = \frac{\sqrt{3}}{9}
+      
+      = \sqrt{3} + \frac{\sqrt{3}}{3} - \frac{\sqrt{3}}{9}
+      
+      = \sqrt{3}(1 + \frac{1}{3} - \frac{1}{9})
+      
+      = \sqrt{3}(\frac{9 + 3 - 1}{9})
+      
+      = \sqrt{3}(\frac{11}{9})
+      
+      = \frac{11\sqrt{3}}{9}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_7 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_7,
+      text : r'\frac{11\sqrt{3}}{9}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_7,
+      option0 : quizParagraphIdOption0_7,
+      option1 : quizParagraphIdOption1_7,
+      option2 : quizParagraphIdOption2_7,
+      option3 : quizParagraphIdOption3_7,
+      solution : quizParagraphIdSolution_7,
+      correctAnswer : quizParagraphIdCorrectAnswer_7
+    );
+
+    final quizParagraphIdQuestion_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_8,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_8,
+      text : r'2\sqrt{2} - \frac{3}{\sqrt{2}} + \frac{4}{\sqrt{8}}.',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final quizParagraphIdOption0_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_8,
+      text : r'\frac{2\sqrt{3}}{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_8 = await ParagraphHelper.appendParagraphBlocks(db);
+    
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_8,
+      text : r'\frac{3\sqrt{2}}{8}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_8,
+      text : r'\frac{3\sqrt{2}}{8}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_8,
+      text : r'\frac{2\sqrt{3}}{8}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_8,
+      text : r'''2\sqrt{2} - \frac{3}{\sqrt{2}} + \frac{4}{\sqrt{8}}
+      
+      \frac{3}{\sqrt{2}} = \frac{3}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}} = \frac{3\sqrt{2}}{2}
+      
+      \sqrt{8} = \sqrt{4 \times 2} = 2\sqrt{2}
+      
+      \therefore \frac{4}{\sqrt{8}} = \frac{4}{2\sqrt{2}} = \frac{2}{\sqrt{2}} = \frac{2}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}} = \frac{2\sqrt{2}}{2} = \sqrt{2}
+      
+      = 2\sqrt{2} - \frac{3\sqrt{2}}{2} + 2
+      
+      = \sqrt{2}(2 - \frac{3}{2} + 1)
+      
+      = \sqrt{2}(\frac{4 - 3 + 2}{2})
+      
+      = \sqrt{2}(\frac{3}{2})
+      
+      = \frac{3\sqrt{2}}{2}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final qiuzParagraphIdCorrectAnswer_8 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : qiuzParagraphIdCorrectAnswer_8,
+      text : r'\frac{3\sqrt{2}}{2}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_8,
+      option0 : quizParagraphIdOption0_8,
+      option1 : quizParagraphIdOption1_8,
+      option2 : quizParagraphIdOption2_8,
+      option3 : quizParagraphIdOption3_8,
+      solution : quizParagraphIdSolution_8,
+      correctAnswer : qiuzParagraphIdCorrectAnswer_8
+    );
+
+    final quizParagraphIdQuestion_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_9,
+      text : r'Simplify: ',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_9,
+      text : r'\frac{12}{\sqrt{24} - \sqrt{6}}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption0_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_9,
+      text : r'\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_9,
+      text : r'12',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_9,
+      text : r'12\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_9,
+      text : r'2\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_9,
+      text : r'''\frac{12}{\sqrt{24} - \sqrt{6}}
+      
+      \sqrt{24} = \sqrt{4 \times 6} = 2\sqrt{6}
+      
+      \sqrt{24} - \sqrt{6} = 2\sqrt{6} - \sqrt{6} = \sqrt{6}
+      
+      = \frac{12}{\sqrt{16}}
+      
+      = \frac{12}{\sqrt{6}} = \frac{12}{\sqrt{6}} \times \frac{\sqrt{6}}{\sqrt{6}} = \frac{12\sqrt{6}}{6}
+      
+      = 2\sqrt{6}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_9 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_9,
+      text : r'2\sqrt{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_9,
+      option0 : quizParagraphIdOption0_9,
+      option1 : quizParagraphIdOption1_9,
+      option2 : quizParagraphIdOption2_9,
+      option3 : quizParagraphIdOption3_9,
+      solution : quizParagraphIdSolution_9,
+      correctAnswer : quizParagraphIdSolution_9
+    );
+
+    final quizParagraphIdQuestion_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_10,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdQuestion_10,
+      text : r'\sqrt{\frac{16}{7}}.',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption0_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption0_10,
+      text : r'\frac{4\sqrt{7}}{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption1_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption1_10,
+      text : r'\frac{4}{\sqrt{7}}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption2_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption2_10,
+      text : r'\frac{\sqrt{4}}{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdOption3_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdOption3_10,
+      text : r'\frac{\sqrt{7}}{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdSolution_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdSolution_10,
+      text : r'''\sqrt{\frac{16}{7}}
+      
+      = \frac{4}{\sqrt{7}}
+      
+      = \frac{4}{\sqrt{7}} \times \frac{\sqrt{7}}{\sqrt{7}}
+      
+      = \frac{4\sqrt{7}}{7}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final quizParagraphIdCorrectAnswer_10 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : quizParagraphIdCorrectAnswer_10,
+      text : r'\frac{4\sqrt{7}}{7}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await QuizHelper.appendQuiz(
+      db,
+      subTopicId : subTopicId,
+      question : quizParagraphIdQuestion_10,
+      option0 : quizParagraphIdOption0_10,
+      option1 : quizParagraphIdOption1_10,
+      option2 : quizParagraphIdOption2_10,
+      option3 : quizParagraphIdOption3_10,
+      solution : quizParagraphIdSolution_10,
+      correctAnswer : quizParagraphIdCorrectAnswer_10
+    );
   }
 }
