@@ -3,6 +3,7 @@ import '../models/sub_topic.dart';
 import '../models/lesson.dart';
 import '../widgets/paragraph_renderer_widget.dart';
 import '../models/message_block.dart';
+import '../services/voice_explanation_button_service.dart';
 
 class LessonContextScreen extends StatelessWidget {
   final SubTopic subTopic;
@@ -143,12 +144,26 @@ class LessonContextScreen extends StatelessWidget {
           if (example.question != null) ...[
             const SizedBox(height : 8),
 
-            Text(
-              "Solution",
-              style : TextStyle(
-                color : Colors.indigo,
-                fontSize : 16,
-              ),
+            Row(
+              mainAxisAlignment : MainAxisAlignment.start,
+              children : [
+                Text(
+                  "Solution",
+                  style : TextStyle(
+                    color : Colors.indigo,
+                    fontSize : 16,
+                  ),
+                ),
+
+                const SizedBox(width : 40),
+
+                VoiceExplanationButtonService(
+                  id : example.blockId,
+                  onPressed : () {
+                    debugPrint('voice explanation for example ${example.blockId}');
+                  },
+                ),
+              ],
             ),
 
             ParagraphRendererWidget(
