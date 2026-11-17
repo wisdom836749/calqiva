@@ -340,5 +340,323 @@ class SurdsInBracketsSeed {
       paragraphSolution : exampleParagraphIdSolution_3,
       paragraphAnswer : exampleParagraphIdAnswer_3
     );
+
+    final headingLessonId_3 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'heading',
+      position : 9 
+    );
+
+    await BlocksHelper.appendHeadingBlock(
+      db,
+      blockId : headingLessonId_3,
+      heading : 'Conjugate Of A Binomial Surds'
+    );
+
+    final paragraphLessonId_3 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'paragraph',
+      position : 10
+    );
+
+    final paragraphId_3 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendParagraphLink(
+      db,
+      blockId : paragraphLessonId_3,
+      paragraphId : paragraphId_3
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '  A binomial is a algebraic expression that contains exactly two terms joined by either a plus(+) or minus(-) sign.\n\n',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '  The conjugate of a binomial surd is obtained by changing the sign between its two terms.\n\n',
+      isMath : false,
+      isImage : false,
+      position : 2
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : 'In simple words:\n',
+      isMath : false,
+      isImage : false,
+      style : {
+        'color' : 'ember',
+        'fontSize' : 16
+      },
+      position : 3
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '. ',
+      isMath : false,
+      isImage : false,
+      style : {
+        'fontSize' : 50,
+        'fontWeight' : 'w900'
+      },
+      position : 4
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : 'If the binomial has a plus sign(+), change it to minus(-).\n\n',
+      isMath : false,
+      isImage : false,
+      position : 5
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '. ',
+      isMath : false,
+      isImage : false,
+      style : {
+        'fontSize' : 50,
+        'fontWeight' : 'w900'
+      },
+      position : 6
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : 'If the binomial has a minus sign(-), change it to plus(+).\n\n',
+      isMath : false,
+      isImage : false,
+      position : 7
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : 'For example:',
+      isMath : false,
+      isImage : false,
+      style : {
+        'color' : 'ember',
+        'fontSize' : 16
+      },
+      position : 8
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '\noriginal binomial: ',
+      isMath : false,
+      isImage : false,
+      position : 9
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : r'\sqrt{a + b}',
+      isMath : true,
+      isImage : false,
+      position : 10
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '\nits conjugate: ',
+      isMath : false,
+      isImage : false,
+      position : 11
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : r'\sqrt{a - b}',
+      isMath : true,
+      isImage : false,
+      position : 12
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '\n\noriginal binomial: ',
+      isMath : false,
+      isImage : false,
+      position : 13
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : r'\sqrt{x - y}',
+      isMath : true,
+      isImage : false,
+      position : 14
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : '\nits conjugate: ',
+      isMath : false,
+      isImage : false,
+      position : 15
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : paragraphId_3,
+      text : r'\sqrt{x + y}',
+      isMath : true,
+      isImage : false,
+      position : 16
+    );
+
+    final exampleLessonId_4 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 11
+    );
+
+    final exampleParagraphIdQuestion_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_4,
+      text : 'Find the product of a binomial surd and its conjugate of ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_4,
+      text : r'(\sqrt{7} + 3)(\sqrt{7} - 3)',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_4,
+      text : r'''(\sqrt{7} + 3)(\sqrt{7} -3)
+      
+      = (\sqrt{7})^2 - 3^2
+      
+      = 7 - 9
+      
+      = -2''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_4 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_4,
+      text : r'-2',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_4,
+      title : 'Example 1',
+      paragraphQuestion : exampleParagraphIdQuestion_4,
+      paragraphSolution : exampleParagraphIdSolution_4,
+      paragraphAnswer : exampleParagraphIdAnswer_4
+    );
+
+    final exampleLessonId_5 = await BlocksHelper.appendLesson(
+      db,
+      subTopicId : subTopicId,
+      blockType : 'example',
+      position : 12
+    );
+
+    final exampleParagraphIdQuestion_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_5,
+      text : 'Simplify: ',
+      isMath : false,
+      isImage : false,
+      position : 1
+    );
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdQuestion_5,
+      text : r'\frac{3 + \sqrt{5}}{4 - \sqrt{10}}',
+      isMath : true,
+      isImage : false,
+      position : 2
+    );
+
+    final exampleParagraphIdSolution_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdSolution_5,
+      text : r'''\frac{3 + \sqrt{5}}{4 - \sqrt{10}}
+      
+      = \frac{3 + \sqrt{5}}{4 - \sqrt{10}} = \frac{4 + \sqrt{10}}{4 + \sqrt{10}}
+      
+      = \frac{3 \times 4 + 3 \times \sqrt{10} + \sqrt{5} \times 4 + \sqrt{5} \times \sqrt{10}}{4^2 - \sqrt{10}^2}
+      
+      = \frac{12 + 3\sqrt{10} + 4\sqrt{5} + \sqrt{50}}{16 - 10}
+      
+      = \frac{12 + 3\sqrt{10} +  4\sqrt{5} + 5\sqrt{2}}{6}''',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    final exampleParagraphIdAnswer_5 = await ParagraphHelper.appendParagraphBlocks(db);
+
+    await ParagraphHelper.appendTextPart(
+      db,
+      paragraphId : exampleParagraphIdAnswer_5,
+      text : r'\frac{12 + 3\sqrt{10} + 4\sqrt{5} + 5\sqrt{2}}{6}',
+      isMath : true,
+      isImage : false,
+      position : 1
+    );
+
+    await BlocksHelper.appendExampleBlock(
+      db,
+      blockId : exampleLessonId_5,
+      title : 'Example 2',
+      paragraphQuestion : exampleParagraphIdQuestion_5,
+      paragraphSolution : exampleParagraphIdSolution_5,
+      paragraphAnswer : exampleParagraphIdAnswer_5
+    );
   }
 }
