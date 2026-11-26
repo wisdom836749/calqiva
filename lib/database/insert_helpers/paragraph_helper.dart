@@ -30,8 +30,8 @@ class ParagraphHelper {
     Database db, {
     required int paragraphId,
     required String text,
-    required bool isMath,
-    required bool isImage,
+    bool isMath = false,
+    bool isImage = false,
     Map<String, dynamic>? style,
     required int position,
   }) async {
